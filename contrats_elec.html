@@ -163,7 +163,21 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="les-différents-contrats-disponibles" class="level2">
 <h2 class="anchored" data-anchor-id="les-différents-contrats-disponibles">Les différents contrats disponibles</h2>
-<p>J’ai ici listés les différents contrats disponibles en Novembre 2022 en Wallonie. Les prix sont souvent identiques à Bxl, mais je n’ai pas vérifié. Notez que les tarifs changent chaque mois, y compris les multiplicateurs, biais, et indices. Le meilleur contrat à un mois donné peut devenir beaucoup moins bon le mois suivant!</p>
+<p>J’ai ici listés les différents contrats disponibles en Novembre 2022 en Wallonie et Bxl. Tout les contrats ne sont pas disponibles partout, notamment à Bxl où seul Engie et TotalEnergies proposent des contrats.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>TotalEnergies propose des contrat différent pour la Wallonie et Bxl. Ceux de Bxl sont en fait les mêmes, juste 1.3c€/kWh plus cher.</p>
+</div>
+</div>
+<p>Notez que les tarifs changent chaque mois, y compris les multiplicateurs, biais, et indices. Le meilleur contrat à un mois donné peut devenir beaucoup moins bon le mois suivant!</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -178,8 +192,8 @@ Note
 <p>Il est désespérant que j’aie à refaire le travail d’un organisme public et que par ailleurs il refuse de partager une information qui devrait être publique, ne serait-ce que par bon sens, mais également légalement, via la loi sur la publicité de l’administration.</p>
 </div>
 </div>
-<div class="cell" data-execution_count="119">
-<div class="cell-output cell-output-display" data-execution_count="119">
+<div class="cell" data-execution_count="345">
+<div class="cell-output cell-output-display" data-execution_count="345">
 
 
 <style type="text/css">
@@ -227,6 +241,7 @@ Note
     <tbody><tr>
         <th rowspan="2">Fournisseur</th>
         <th rowspan="2">Contrat</th>
+        <th rowspan="2">Dispo</th>
         <th rowspan="2">Coût fixe (€/an)</th>
         <th rowspan="2">Indice</th>
         <th colspan="2" class="mono">Monohoraire<br>☀️/🌙</th>
@@ -248,6 +263,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>ComfyFlex</td>
+        <td>WA</td>
         <td>63.6</td>
         <td>belpex_q</td>
         <td class="mono val">0.1128</td>
@@ -263,6 +279,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>ComfyFlex+</td>
+        <td>WA</td>
         <td>63.6</td>
         <td>belpex_q</td>
         <td class="mono val">0.1128</td>
@@ -278,6 +295,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>Actif+</td>
+        <td>WA</td>
         <td>79.5</td>
         <td>EMarketCWE</td>
         <td class="mono val">0.1160</td>
@@ -293,6 +311,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>Basic</td>
+        <td>WA</td>
         <td>21.2</td>
         <td>belpex_q</td>
         <td class="mono val">0.1128</td>
@@ -308,6 +327,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>Eco+</td>
+        <td>WA</td>
         <td>79.5</td>
         <td>EMarketCWE</td>
         <td class="mono val">0.1150</td>
@@ -323,6 +343,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>Ecoflex</td>
+        <td>WA</td>
         <td>68.9</td>
         <td>EMarketCWE</td>
         <td class="mono val">0.1150</td>
@@ -338,6 +359,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>Essential</td>
+        <td>WA</td>
         <td>42.4</td>
         <td>EMarketCWE</td>
         <td class="mono val">0.1160</td>
@@ -353,6 +375,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>Optimal</td>
+        <td>WA</td>
         <td>53.0</td>
         <td>EMarketCWE</td>
         <td class="mono val">0.1160</td>
@@ -367,7 +390,8 @@ Note
     
     <tr>
         <td>TotalEnergies</td>
-        <td>Pixel</td>
+        <td>Pixel (WA)</td>
+        <td>WA</td>
         <td>25</td>
         <td>belpex_m_rlp</td>
         <td class="mono val">0.1063</td>
@@ -382,7 +406,8 @@ Note
     
     <tr>
         <td>TotalEnergies</td>
-        <td>Pixel Blue</td>
+        <td>Pixel Blue (WA)</td>
+        <td>WA</td>
         <td>70</td>
         <td>belpex_m_rlp</td>
         <td class="mono val">0.1063</td>
@@ -396,8 +421,41 @@ Note
     </tr>
     
     <tr>
+        <td>TotalEnergies</td>
+        <td>Pixel (BXL)</td>
+        <td>BXL</td>
+        <td>25</td>
+        <td>belpex_m_rlp</td>
+        <td class="mono val">0.1063</td>
+        <td class="mono val">4.450</td>
+        <td class="day val">0.1250</td>
+        <td class="day val">4.450</td>
+        <td class="night val">0.0930</td>
+        <td class="night val">4.450</td>
+        <td class="excl_night val">0.0950</td>
+        <td class="excl_night val">4.300</td>
+    </tr>
+    
+    <tr>
+        <td>TotalEnergies</td>
+        <td>Pixel Blue (BXL)</td>
+        <td>BXL</td>
+        <td>70</td>
+        <td>belpex_m_rlp</td>
+        <td class="mono val">0.1063</td>
+        <td class="mono val">4.500</td>
+        <td class="day val">0.1250</td>
+        <td class="day val">4.500</td>
+        <td class="night val">0.0930</td>
+        <td class="night val">4.500</td>
+        <td class="excl_night val">0.0950</td>
+        <td class="excl_night val">4.350</td>
+    </tr>
+    
+    <tr>
         <td>Eneco</td>
         <td>Soleil &amp; Vent Variable</td>
+        <td>WA</td>
         <td>65</td>
         <td>endex103</td>
         <td class="mono val">0.1000</td>
@@ -413,6 +471,7 @@ Note
     <tr>
         <td>Eneco</td>
         <td>Soleil &amp; Vent Flex</td>
+        <td>WA</td>
         <td>65</td>
         <td>belpex_q_rlp</td>
         <td class="mono val">0.1000</td>
@@ -428,6 +487,7 @@ Note
     <tr>
         <td>Engie</td>
         <td>Easy</td>
+        <td>WA+BXL</td>
         <td>58.3</td>
         <td>endex103</td>
         <td class="mono val">0.1091</td>
@@ -443,6 +503,7 @@ Note
     <tr>
         <td>Engie</td>
         <td>Flow</td>
+        <td>WA+BXL</td>
         <td>53.0</td>
         <td>belpex_m</td>
         <td class="mono val">0.1067</td>
@@ -458,6 +519,7 @@ Note
     <tr>
         <td>Engie</td>
         <td>Direct</td>
+        <td>WA+BXL</td>
         <td>26.34</td>
         <td>belpex_m</td>
         <td class="mono val">0.1081</td>
@@ -473,6 +535,7 @@ Note
     <tr>
         <td>DATS24</td>
         <td>Variable</td>
+        <td>WA</td>
         <td>35.04</td>
         <td>belpex_m_rlp</td>
         <td class="mono val">0.1067</td>
@@ -488,6 +551,7 @@ Note
     <tr>
         <td>OCTA+</td>
         <td>Eco Chill</td>
+        <td>WA</td>
         <td>130.0</td>
         <td>belpex_m_rlp</td>
         <td class="mono val">0.1127</td>
@@ -503,6 +567,7 @@ Note
     <tr>
         <td>OCTA+</td>
         <td>Chill</td>
+        <td>WA</td>
         <td>65.0</td>
         <td>belpex_m_rlp</td>
         <td class="mono val">0.1127</td>
@@ -518,6 +583,7 @@ Note
     <tr>
         <td>MEGA</td>
         <td>Smart</td>
+        <td>WA</td>
         <td>42.4</td>
         <td>belpex_m</td>
         <td class="mono val">0.1195</td>
@@ -533,6 +599,7 @@ Note
     <tr>
         <td>MEGA</td>
         <td>Online</td>
+        <td>WA</td>
         <td>15.9</td>
         <td>belpex_m</td>
         <td class="mono val">0.1150</td>
@@ -548,6 +615,7 @@ Note
     <tr>
         <td>MEGA</td>
         <td>Cosy</td>
+        <td>WA</td>
         <td>58.3</td>
         <td>belpex_m</td>
         <td class="mono val">0.1195</td>
@@ -563,6 +631,7 @@ Note
     <tr>
         <td>MEGA</td>
         <td>Group</td>
+        <td>WA</td>
         <td>68.9</td>
         <td>belpex_m</td>
         <td class="mono val">0.1150</td>
@@ -574,20 +643,69 @@ Note
         <td class="excl_night val">0.1150</td>
         <td class="excl_night val">2.550</td>
     </tr>
+    
+    <tr>
+        <td>Bolt</td>
+        <td>Bolt</td>
+        <td>WA</td>
+        <td>105.0</td>
+        <td>belpex_q</td>
+        <td class="mono val">0.1343</td>
+        <td class="mono val">6.190</td>
+        <td class="day val">0.1343</td>
+        <td class="day val">6.190</td>
+        <td class="night val">0.1343</td>
+        <td class="night val">6.190</td>
+        <td class="excl_night val">0.1343</td>
+        <td class="excl_night val">6.190</td>
+    </tr>
+    
+    <tr>
+        <td>Bolt</td>
+        <td>Online</td>
+        <td>WA</td>
+        <td>73.44</td>
+        <td>belpex_q</td>
+        <td class="mono val">0.1343</td>
+        <td class="mono val">6.190</td>
+        <td class="day val">0.1343</td>
+        <td class="day val">6.190</td>
+        <td class="night val">0.1343</td>
+        <td class="night val">6.190</td>
+        <td class="excl_night val">0.1343</td>
+        <td class="excl_night val">6.190</td>
+    </tr>
+    
+    <tr>
+        <td>Bolt</td>
+        <td>Go</td>
+        <td>WA</td>
+        <td>10.44</td>
+        <td>belpex_q</td>
+        <td class="mono val">0.1343</td>
+        <td class="mono val">6.190</td>
+        <td class="day val">0.1343</td>
+        <td class="day val">6.190</td>
+        <td class="night val">0.1343</td>
+        <td class="night val">6.190</td>
+        <td class="excl_night val">0.1343</td>
+        <td class="excl_night val">6.190</td>
+    </tr>
     </tbody></table>
 </div>
 </div>
 <p>On voit qu’il y a une pléthore d’offre différentes. Et encore, le nombre de contrat différent a été considérablement réduit depuis le début de la crise énergétique.</p>
 <p>Pour un client possédant un compteur monohoraire, la comparaison se révèle compliquée: il y a plusieurs indices différents. Pour le client en bihoraire, la tâche est encore plus hardue: il y a deux fois plus de paramètres à considérer!</p>
 <p>On peut tenter de simplifier quelque peu cette grille pour le bihoraire, en regardant la répartition “moyenne” de consommation en heure pleine et en heure creuse, via les courbes RLP dont on a discuté plus haut. Cela donne en gros que c’est 50/50. Le ménage “moyen” consomme autant en heure creuse qu’en heure pleine. Faisons cette hypothèse à partir de maintenant. On va aussi abandonner l’analyse de l’exclusif nuit, qui concerne une minorité.</p>
-<div class="cell" data-execution_count="126">
-<div class="cell-output cell-output-display" data-execution_count="126">
+<div class="cell" data-execution_count="346">
+<div class="cell-output cell-output-display" data-execution_count="346">
 
 
 <table class="contracts_table">
     <tbody><tr>
         <th rowspan="2">Fournisseur</th>
         <th rowspan="2">Contrat</th>
+        <th rowspan="2">Dispo</th>
         <th rowspan="2">Coût fixe (€/an)</th>
         <th rowspan="2">Indice</th>
         <th colspan="2" class="mono">Monohoraire</th>
@@ -603,6 +721,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>ComfyFlex</td>
+        <td>WA</td>
         <td>63.6</td>
         <td>belpex_q</td>
         <td class="mono val">0.1128</td>
@@ -614,6 +733,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>ComfyFlex+</td>
+        <td>WA</td>
         <td>63.6</td>
         <td>belpex_q</td>
         <td class="mono val">0.1128</td>
@@ -625,6 +745,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>Actif+</td>
+        <td>WA</td>
         <td>79.5</td>
         <td>EMarketCWE</td>
         <td class="mono val">0.1160</td>
@@ -636,6 +757,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>Basic</td>
+        <td>WA</td>
         <td>21.2</td>
         <td>belpex_q</td>
         <td class="mono val">0.1128</td>
@@ -647,6 +769,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>Eco+</td>
+        <td>WA</td>
         <td>79.5</td>
         <td>EMarketCWE</td>
         <td class="mono val">0.1150</td>
@@ -658,6 +781,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>Ecoflex</td>
+        <td>WA</td>
         <td>68.9</td>
         <td>EMarketCWE</td>
         <td class="mono val">0.1150</td>
@@ -669,6 +793,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>Essential</td>
+        <td>WA</td>
         <td>42.4</td>
         <td>EMarketCWE</td>
         <td class="mono val">0.1160</td>
@@ -680,6 +805,7 @@ Note
     <tr>
         <td>Luminus</td>
         <td>Optimal</td>
+        <td>WA</td>
         <td>53.0</td>
         <td>EMarketCWE</td>
         <td class="mono val">0.1160</td>
@@ -690,7 +816,8 @@ Note
     
     <tr>
         <td>TotalEnergies</td>
-        <td>Pixel</td>
+        <td>Pixel (WA)</td>
+        <td>WA</td>
         <td>25</td>
         <td>belpex_m_rlp</td>
         <td class="mono val">0.1063</td>
@@ -701,7 +828,8 @@ Note
     
     <tr>
         <td>TotalEnergies</td>
-        <td>Pixel Blue</td>
+        <td>Pixel Blue (WA)</td>
+        <td>WA</td>
         <td>70</td>
         <td>belpex_m_rlp</td>
         <td class="mono val">0.1063</td>
@@ -711,8 +839,33 @@ Note
     </tr>
     
     <tr>
+        <td>TotalEnergies</td>
+        <td>Pixel (BXL)</td>
+        <td>BXL</td>
+        <td>25</td>
+        <td>belpex_m_rlp</td>
+        <td class="mono val">0.1063</td>
+        <td class="mono val">4.450</td>
+        <td class="day val">0.1090</td>
+        <td class="day val">4.450</td>
+    </tr>
+    
+    <tr>
+        <td>TotalEnergies</td>
+        <td>Pixel Blue (BXL)</td>
+        <td>BXL</td>
+        <td>70</td>
+        <td>belpex_m_rlp</td>
+        <td class="mono val">0.1063</td>
+        <td class="mono val">4.500</td>
+        <td class="day val">0.1090</td>
+        <td class="day val">4.500</td>
+    </tr>
+    
+    <tr>
         <td>Eneco</td>
         <td>Soleil &amp; Vent Variable</td>
+        <td>WA</td>
         <td>65</td>
         <td>endex103</td>
         <td class="mono val">0.1000</td>
@@ -724,6 +877,7 @@ Note
     <tr>
         <td>Eneco</td>
         <td>Soleil &amp; Vent Flex</td>
+        <td>WA</td>
         <td>65</td>
         <td>belpex_q_rlp</td>
         <td class="mono val">0.1000</td>
@@ -735,6 +889,7 @@ Note
     <tr>
         <td>Engie</td>
         <td>Easy</td>
+        <td>WA+BXL</td>
         <td>58.3</td>
         <td>endex103</td>
         <td class="mono val">0.1091</td>
@@ -746,6 +901,7 @@ Note
     <tr>
         <td>Engie</td>
         <td>Flow</td>
+        <td>WA+BXL</td>
         <td>53.0</td>
         <td>belpex_m</td>
         <td class="mono val">0.1067</td>
@@ -757,6 +913,7 @@ Note
     <tr>
         <td>Engie</td>
         <td>Direct</td>
+        <td>WA+BXL</td>
         <td>26.34</td>
         <td>belpex_m</td>
         <td class="mono val">0.1081</td>
@@ -768,6 +925,7 @@ Note
     <tr>
         <td>DATS24</td>
         <td>Variable</td>
+        <td>WA</td>
         <td>35.04</td>
         <td>belpex_m_rlp</td>
         <td class="mono val">0.1067</td>
@@ -779,6 +937,7 @@ Note
     <tr>
         <td>OCTA+</td>
         <td>Eco Chill</td>
+        <td>WA</td>
         <td>130.0</td>
         <td>belpex_m_rlp</td>
         <td class="mono val">0.1127</td>
@@ -790,6 +949,7 @@ Note
     <tr>
         <td>OCTA+</td>
         <td>Chill</td>
+        <td>WA</td>
         <td>65.0</td>
         <td>belpex_m_rlp</td>
         <td class="mono val">0.1127</td>
@@ -801,6 +961,7 @@ Note
     <tr>
         <td>MEGA</td>
         <td>Smart</td>
+        <td>WA</td>
         <td>42.4</td>
         <td>belpex_m</td>
         <td class="mono val">0.1195</td>
@@ -812,6 +973,7 @@ Note
     <tr>
         <td>MEGA</td>
         <td>Online</td>
+        <td>WA</td>
         <td>15.9</td>
         <td>belpex_m</td>
         <td class="mono val">0.1150</td>
@@ -823,6 +985,7 @@ Note
     <tr>
         <td>MEGA</td>
         <td>Cosy</td>
+        <td>WA</td>
         <td>58.3</td>
         <td>belpex_m</td>
         <td class="mono val">0.1195</td>
@@ -834,12 +997,49 @@ Note
     <tr>
         <td>MEGA</td>
         <td>Group</td>
+        <td>WA</td>
         <td>68.9</td>
         <td>belpex_m</td>
         <td class="mono val">0.1150</td>
         <td class="mono val">2.550</td>
         <td class="day val">0.1150</td>
         <td class="day val">2.550</td>
+    </tr>
+    
+    <tr>
+        <td>Bolt</td>
+        <td>Bolt</td>
+        <td>WA</td>
+        <td>105.0</td>
+        <td>belpex_q</td>
+        <td class="mono val">0.1343</td>
+        <td class="mono val">6.190</td>
+        <td class="day val">0.1343</td>
+        <td class="day val">6.190</td>
+    </tr>
+    
+    <tr>
+        <td>Bolt</td>
+        <td>Online</td>
+        <td>WA</td>
+        <td>73.44</td>
+        <td>belpex_q</td>
+        <td class="mono val">0.1343</td>
+        <td class="mono val">6.190</td>
+        <td class="day val">0.1343</td>
+        <td class="day val">6.190</td>
+    </tr>
+    
+    <tr>
+        <td>Bolt</td>
+        <td>Go</td>
+        <td>WA</td>
+        <td>10.44</td>
+        <td>belpex_q</td>
+        <td class="mono val">0.1343</td>
+        <td class="mono val">6.190</td>
+        <td class="day val">0.1343</td>
+        <td class="day val">6.190</td>
     </tr>
     </tbody></table>
 </div>
@@ -1045,359 +1245,521 @@ Note
 </div>
 </div>
 <p>On peut ensuite reprendre notre tableau des contrats au dessus, et convertir les multiplicateurs, en faisant comme si tout était du <code>belpex_m</code>:</p>
-<div class="cell" data-execution_count="283">
-<div class="cell-output cell-output-display" data-execution_count="283">
+<div class="cell" data-execution_count="353">
+<div class="cell-output cell-output-display" data-execution_count="353">
 
 
-<table class="contracts_table">
-    <tbody><tr>
-        <th rowspan="2">Fournisseur</th>
-        <th rowspan="2">Contrat</th>
-        <th rowspan="2">Coût fixe (€/an)</th>
-        <th colspan="2" class="mono">Monohoraire</th>
-        <th colspan="2" class="day">Bihoraire (moyenne 50/50)</th>
-    </tr>
-    <tr>
-        <th class="mono">x</th>
-        <th class="mono">y</th>
-        <th class="day">x</th>
-        <th class="day">y</th>
-    </tr>
+    <table class="contracts_table">
+        <tbody><tr>
+            <th colspan="7">WALLONIE</th>
+        </tr>
+        <tr>
+            <th rowspan="2">Fournisseur</th>
+            <th rowspan="2">Contrat</th>
+            <th rowspan="2">Coût fixe (€/an)</th>
+            <th colspan="2" class="mono">Monohoraire</th>
+            <th colspan="2" class="day">Bihoraire (moyenne 50/50)</th>
+        </tr>
+        <tr>
+            <th class="mono">x</th>
+            <th class="mono">y</th>
+            <th class="day">x</th>
+            <th class="day">y</th>
+        </tr>
+    
+        <tr>
+            <td>Luminus</td>
+            <td>ComfyFlex</td>
+            <td>63.6</td>
+            <td class="mono val">0.1128</td>
+            <td class="mono val">4.441</td>
+            <td class="day val">0.1145</td>
+            <td class="day val">4.174</td>
+        </tr>
+        
+        <tr>
+            <td>Luminus</td>
+            <td>ComfyFlex+</td>
+            <td>63.6</td>
+            <td class="mono val">0.1128</td>
+            <td class="mono val">6.441</td>
+            <td class="day val">0.1145</td>
+            <td class="day val">6.174</td>
+        </tr>
+        
+        <tr>
+            <td>Luminus</td>
+            <td>Actif+</td>
+            <td>79.5</td>
+            <td class="mono val">0.0776</td>
+            <td class="mono val">22.674</td>
+            <td class="day val">0.0777</td>
+            <td class="day val">22.556</td>
+        </tr>
+        
+        <tr>
+            <td>Luminus</td>
+            <td>Basic</td>
+            <td>21.2</td>
+            <td class="mono val">0.1128</td>
+            <td class="mono val">0.970</td>
+            <td class="day val">0.1145</td>
+            <td class="day val">1.395</td>
+        </tr>
+        
+        <tr>
+            <td>Luminus</td>
+            <td>Eco+</td>
+            <td>79.5</td>
+            <td class="mono val">0.0769</td>
+            <td class="mono val">22.674</td>
+            <td class="day val">0.0778</td>
+            <td class="day val">22.556</td>
+        </tr>
+        
+        <tr>
+            <td>Luminus</td>
+            <td>Ecoflex</td>
+            <td>68.9</td>
+            <td class="mono val">0.0769</td>
+            <td class="mono val">22.687</td>
+            <td class="day val">0.0778</td>
+            <td class="day val">22.600</td>
+        </tr>
+        
+        <tr>
+            <td>Luminus</td>
+            <td>Essential</td>
+            <td>42.4</td>
+            <td class="mono val">0.0776</td>
+            <td class="mono val">22.534</td>
+            <td class="day val">0.0777</td>
+            <td class="day val">22.421</td>
+        </tr>
+        
+        <tr>
+            <td>Luminus</td>
+            <td>Optimal</td>
+            <td>53.0</td>
+            <td class="mono val">0.0776</td>
+            <td class="mono val">23.264</td>
+            <td class="day val">0.0777</td>
+            <td class="day val">23.176</td>
+        </tr>
+        
+        <tr>
+            <td>TotalEnergies</td>
+            <td>Pixel (WA)</td>
+            <td>25</td>
+            <td class="mono val">0.1084</td>
+            <td class="mono val">3.150</td>
+            <td class="day val">0.1111</td>
+            <td class="day val">3.150</td>
+        </tr>
+        
+        <tr>
+            <td>TotalEnergies</td>
+            <td>Pixel Blue (WA)</td>
+            <td>70</td>
+            <td class="mono val">0.1084</td>
+            <td class="mono val">3.200</td>
+            <td class="day val">0.1111</td>
+            <td class="day val">3.200</td>
+        </tr>
+        
+        <tr>
+            <td>Eneco</td>
+            <td>Soleil &amp; Vent Variable</td>
+            <td>65</td>
+            <td class="mono val">0.1222</td>
+            <td class="mono val">6.810</td>
+            <td class="day val">0.1222</td>
+            <td class="day val">7.578</td>
+        </tr>
+        
+        <tr>
+            <td>Eneco</td>
+            <td>Soleil &amp; Vent Flex</td>
+            <td>65</td>
+            <td class="mono val">0.1020</td>
+            <td class="mono val">5.571</td>
+            <td class="day val">0.1020</td>
+            <td class="day val">5.585</td>
+        </tr>
+        
+        <tr>
+            <td>Engie</td>
+            <td>Easy</td>
+            <td>58.3</td>
+            <td class="mono val">0.1333</td>
+            <td class="mono val">4.495</td>
+            <td class="day val">0.1365</td>
+            <td class="day val">4.116</td>
+        </tr>
+        
+        <tr>
+            <td>Engie</td>
+            <td>Flow</td>
+            <td>53.0</td>
+            <td class="mono val">0.1067</td>
+            <td class="mono val">0.980</td>
+            <td class="day val">0.1077</td>
+            <td class="day val">0.690</td>
+        </tr>
+        
+        <tr>
+            <td>Engie</td>
+            <td>Direct</td>
+            <td>26.34</td>
+            <td class="mono val">0.1081</td>
+            <td class="mono val">2.836</td>
+            <td class="day val">0.1093</td>
+            <td class="day val">2.811</td>
+        </tr>
+        
+        <tr>
+            <td>DATS24</td>
+            <td>Variable</td>
+            <td>35.04</td>
+            <td class="mono val">0.1088</td>
+            <td class="mono val">0.592</td>
+            <td class="day val">0.1140</td>
+            <td class="day val">0.592</td>
+        </tr>
+        
+        <tr>
+            <td>OCTA+</td>
+            <td>Eco Chill</td>
+            <td>130.0</td>
+            <td class="mono val">0.1149</td>
+            <td class="mono val">1.250</td>
+            <td class="day val">0.1150</td>
+            <td class="day val">1.250</td>
+        </tr>
+        
+        <tr>
+            <td>OCTA+</td>
+            <td>Chill</td>
+            <td>65.0</td>
+            <td class="mono val">0.1149</td>
+            <td class="mono val">1.000</td>
+            <td class="day val">0.1150</td>
+            <td class="day val">1.000</td>
+        </tr>
+        
+        <tr>
+            <td>MEGA</td>
+            <td>Smart</td>
+            <td>42.4</td>
+            <td class="mono val">0.1195</td>
+            <td class="mono val">2.550</td>
+            <td class="day val">0.1245</td>
+            <td class="day val">2.550</td>
+        </tr>
+        
+        <tr>
+            <td>MEGA</td>
+            <td>Online</td>
+            <td>15.9</td>
+            <td class="mono val">0.1150</td>
+            <td class="mono val">1.200</td>
+            <td class="day val">0.1150</td>
+            <td class="day val">1.200</td>
+        </tr>
+        
+        <tr>
+            <td>MEGA</td>
+            <td>Cosy</td>
+            <td>58.3</td>
+            <td class="mono val">0.1195</td>
+            <td class="mono val">2.550</td>
+            <td class="day val">0.1245</td>
+            <td class="day val">2.550</td>
+        </tr>
+        
+        <tr>
+            <td>MEGA</td>
+            <td>Group</td>
+            <td>68.9</td>
+            <td class="mono val">0.1150</td>
+            <td class="mono val">2.550</td>
+            <td class="day val">0.1150</td>
+            <td class="day val">2.550</td>
+        </tr>
+        
+        <tr>
+            <td>Bolt</td>
+            <td>Bolt</td>
+            <td>105.0</td>
+            <td class="mono val">0.1343</td>
+            <td class="mono val">6.190</td>
+            <td class="day val">0.1343</td>
+            <td class="day val">6.190</td>
+        </tr>
+        
+        <tr>
+            <td>Bolt</td>
+            <td>Online</td>
+            <td>73.44</td>
+            <td class="mono val">0.1343</td>
+            <td class="mono val">6.190</td>
+            <td class="day val">0.1343</td>
+            <td class="day val">6.190</td>
+        </tr>
+        
+        <tr>
+            <td>Bolt</td>
+            <td>Go</td>
+            <td>10.44</td>
+            <td class="mono val">0.1343</td>
+            <td class="mono val">6.190</td>
+            <td class="day val">0.1343</td>
+            <td class="day val">6.190</td>
+        </tr>
+        </tbody></table>
+</div>
+</div>
+<div class="cell" data-execution_count="354">
+<div class="cell-output cell-output-display" data-execution_count="354">
 
-    <tr>
-        <td>Luminus</td>
-        <td>ComfyFlex</td>
-        <td>63.6</td>
-        <td class="mono val">0.1128</td>
-        <td class="mono val">4.441</td>
-        <td class="day val">0.1145</td>
-        <td class="day val">4.174</td>
-    </tr>
+
+    <table class="contracts_table">
+        <tbody><tr>
+            <th colspan="7">BRUXELLES</th>
+        </tr>
+        <tr>
+            <th rowspan="2">Fournisseur</th>
+            <th rowspan="2">Contrat</th>
+            <th rowspan="2">Coût fixe (€/an)</th>
+            <th colspan="2" class="mono">Monohoraire</th>
+            <th colspan="2" class="day">Bihoraire (moyenne 50/50)</th>
+        </tr>
+        <tr>
+            <th class="mono">x</th>
+            <th class="mono">y</th>
+            <th class="day">x</th>
+            <th class="day">y</th>
+        </tr>
     
-    <tr>
-        <td>Luminus</td>
-        <td>ComfyFlex+</td>
-        <td>63.6</td>
-        <td class="mono val">0.1128</td>
-        <td class="mono val">6.441</td>
-        <td class="day val">0.1145</td>
-        <td class="day val">6.174</td>
-    </tr>
-    
-    <tr>
-        <td>Luminus</td>
-        <td>Actif+</td>
-        <td>79.5</td>
-        <td class="mono val">0.0776</td>
-        <td class="mono val">22.674</td>
-        <td class="day val">0.0777</td>
-        <td class="day val">22.556</td>
-    </tr>
-    
-    <tr>
-        <td>Luminus</td>
-        <td>Basic</td>
-        <td>21.2</td>
-        <td class="mono val">0.1128</td>
-        <td class="mono val">0.970</td>
-        <td class="day val">0.1145</td>
-        <td class="day val">1.395</td>
-    </tr>
-    
-    <tr>
-        <td>Luminus</td>
-        <td>Eco+</td>
-        <td>79.5</td>
-        <td class="mono val">0.0769</td>
-        <td class="mono val">22.674</td>
-        <td class="day val">0.0778</td>
-        <td class="day val">22.556</td>
-    </tr>
-    
-    <tr>
-        <td>Luminus</td>
-        <td>Ecoflex</td>
-        <td>68.9</td>
-        <td class="mono val">0.0769</td>
-        <td class="mono val">22.687</td>
-        <td class="day val">0.0778</td>
-        <td class="day val">22.600</td>
-    </tr>
-    
-    <tr>
-        <td>Luminus</td>
-        <td>Essential</td>
-        <td>42.4</td>
-        <td class="mono val">0.0776</td>
-        <td class="mono val">22.534</td>
-        <td class="day val">0.0777</td>
-        <td class="day val">22.421</td>
-    </tr>
-    
-    <tr>
-        <td>Luminus</td>
-        <td>Optimal</td>
-        <td>53.0</td>
-        <td class="mono val">0.0776</td>
-        <td class="mono val">23.264</td>
-        <td class="day val">0.0777</td>
-        <td class="day val">23.176</td>
-    </tr>
-    
-    <tr>
-        <td>TotalEnergies</td>
-        <td>Pixel</td>
-        <td>25</td>
-        <td class="mono val">0.1084</td>
-        <td class="mono val">3.150</td>
-        <td class="day val">0.1111</td>
-        <td class="day val">3.150</td>
-    </tr>
-    
-    <tr>
-        <td>TotalEnergies</td>
-        <td>Pixel Blue</td>
-        <td>70</td>
-        <td class="mono val">0.1084</td>
-        <td class="mono val">3.200</td>
-        <td class="day val">0.1111</td>
-        <td class="day val">3.200</td>
-    </tr>
-    
-    <tr>
-        <td>Eneco</td>
-        <td>Soleil &amp; Vent Variable</td>
-        <td>65</td>
-        <td class="mono val">0.1222</td>
-        <td class="mono val">6.810</td>
-        <td class="day val">0.1222</td>
-        <td class="day val">7.578</td>
-    </tr>
-    
-    <tr>
-        <td>Eneco</td>
-        <td>Soleil &amp; Vent Flex</td>
-        <td>65</td>
-        <td class="mono val">0.1020</td>
-        <td class="mono val">5.571</td>
-        <td class="day val">0.1020</td>
-        <td class="day val">5.585</td>
-    </tr>
-    
-    <tr>
-        <td>Engie</td>
-        <td>Easy</td>
-        <td>58.3</td>
-        <td class="mono val">0.1333</td>
-        <td class="mono val">4.495</td>
-        <td class="day val">0.1365</td>
-        <td class="day val">4.116</td>
-    </tr>
-    
-    <tr>
-        <td>Engie</td>
-        <td>Flow</td>
-        <td>53.0</td>
-        <td class="mono val">0.1067</td>
-        <td class="mono val">0.980</td>
-        <td class="day val">0.1077</td>
-        <td class="day val">0.690</td>
-    </tr>
-    
-    <tr>
-        <td>Engie</td>
-        <td>Direct</td>
-        <td>26.34</td>
-        <td class="mono val">0.1081</td>
-        <td class="mono val">2.836</td>
-        <td class="day val">0.1093</td>
-        <td class="day val">2.811</td>
-    </tr>
-    
-    <tr>
-        <td>DATS24</td>
-        <td>Variable</td>
-        <td>35.04</td>
-        <td class="mono val">0.1088</td>
-        <td class="mono val">0.592</td>
-        <td class="day val">0.1140</td>
-        <td class="day val">0.592</td>
-    </tr>
-    
-    <tr>
-        <td>OCTA+</td>
-        <td>Eco Chill</td>
-        <td>130.0</td>
-        <td class="mono val">0.1149</td>
-        <td class="mono val">1.250</td>
-        <td class="day val">0.1150</td>
-        <td class="day val">1.250</td>
-    </tr>
-    
-    <tr>
-        <td>OCTA+</td>
-        <td>Chill</td>
-        <td>65.0</td>
-        <td class="mono val">0.1149</td>
-        <td class="mono val">1.000</td>
-        <td class="day val">0.1150</td>
-        <td class="day val">1.000</td>
-    </tr>
-    
-    <tr>
-        <td>MEGA</td>
-        <td>Smart</td>
-        <td>42.4</td>
-        <td class="mono val">0.1195</td>
-        <td class="mono val">2.550</td>
-        <td class="day val">0.1245</td>
-        <td class="day val">2.550</td>
-    </tr>
-    
-    <tr>
-        <td>MEGA</td>
-        <td>Online</td>
-        <td>15.9</td>
-        <td class="mono val">0.1150</td>
-        <td class="mono val">1.200</td>
-        <td class="day val">0.1150</td>
-        <td class="day val">1.200</td>
-    </tr>
-    
-    <tr>
-        <td>MEGA</td>
-        <td>Cosy</td>
-        <td>58.3</td>
-        <td class="mono val">0.1195</td>
-        <td class="mono val">2.550</td>
-        <td class="day val">0.1245</td>
-        <td class="day val">2.550</td>
-    </tr>
-    
-    <tr>
-        <td>MEGA</td>
-        <td>Group</td>
-        <td>68.9</td>
-        <td class="mono val">0.1150</td>
-        <td class="mono val">2.550</td>
-        <td class="day val">0.1150</td>
-        <td class="day val">2.550</td>
-    </tr>
-    </tbody></table>
+        <tr>
+            <td>TotalEnergies</td>
+            <td>Pixel (BXL)</td>
+            <td>25</td>
+            <td class="mono val">0.1084</td>
+            <td class="mono val">4.450</td>
+            <td class="day val">0.1111</td>
+            <td class="day val">4.450</td>
+        </tr>
+        
+        <tr>
+            <td>TotalEnergies</td>
+            <td>Pixel Blue (BXL)</td>
+            <td>70</td>
+            <td class="mono val">0.1084</td>
+            <td class="mono val">4.500</td>
+            <td class="day val">0.1111</td>
+            <td class="day val">4.500</td>
+        </tr>
+        
+        <tr>
+            <td>Engie</td>
+            <td>Easy</td>
+            <td>58.3</td>
+            <td class="mono val">0.1333</td>
+            <td class="mono val">4.495</td>
+            <td class="day val">0.1365</td>
+            <td class="day val">4.116</td>
+        </tr>
+        
+        <tr>
+            <td>Engie</td>
+            <td>Flow</td>
+            <td>53.0</td>
+            <td class="mono val">0.1067</td>
+            <td class="mono val">0.980</td>
+            <td class="day val">0.1077</td>
+            <td class="day val">0.690</td>
+        </tr>
+        
+        <tr>
+            <td>Engie</td>
+            <td>Direct</td>
+            <td>26.34</td>
+            <td class="mono val">0.1081</td>
+            <td class="mono val">2.836</td>
+            <td class="day val">0.1093</td>
+            <td class="day val">2.811</td>
+        </tr>
+        </tbody></table>
 </div>
 </div>
 <p>Une seconde hypothèse que l’on va poser, c’est que l’on néglige les coûts fixes liés aux contrats. Ils devraient être faible vis-a-vis des économies à faire, de toute manière. On peut ensuite entreprendre de supprimer tout les contrats “dominés”, c’est à dire tel qu’un autre contrat a en même temps un <span class="math inline">\(x\)</span> et un <span class="math inline">\(y\)</span> plus petit. Un tel contrat sera toujours plus cher.</p>
-<div class="cell" data-execution_count="299">
-<div class="cell-output cell-output-display" data-execution_count="299">
+<div class="cell" data-execution_count="363">
+<div class="cell-output cell-output-display" data-execution_count="363">
 
 
-<table class="contracts_table">
-    <tbody><tr><th colspan="5">Contrats non-dominés, monohoraire</th></tr>
-    <tr>
-        <th rowspan="2">Fournisseur</th>
-        <th rowspan="2">Contrat</th>
-        <th rowspan="2">Coût fixe (€/an)</th>
-        <th colspan="2" class="mono">Monohoraire</th>
-    </tr>
-    <tr>
-        <th class="mono">x</th>
-        <th class="mono">y</th>
-    </tr>
-
-    <tr>
-        <td>DATS24</td>
-        <td>Variable</td>
-        <td>35.04</td>
-        <td class="mono val">0.1088</td>
-        <td class="mono val">0.592</td>
-    </tr>
+    <table class="contracts_table">
+        <tbody><tr><th colspan="5">Contrats non-dominés, monohoraire, WALLONIE</th></tr>
+        <tr>
+            <th rowspan="2">Fournisseur</th>
+            <th rowspan="2">Contrat</th>
+            <th rowspan="2">Coût fixe (€/an)</th>
+            <th colspan="2" class="mono">Monohoraire</th>
+        </tr>
+        <tr>
+            <th class="mono">x</th>
+            <th class="mono">y</th>
+        </tr>
     
-    <tr>
-        <td>Engie</td>
-        <td>Flow</td>
-        <td>53.0</td>
-        <td class="mono val">0.1067</td>
-        <td class="mono val">0.980</td>
-    </tr>
-    
-    <tr>
-        <td>Eneco</td>
-        <td>Soleil &amp; Vent Flex</td>
-        <td>65</td>
-        <td class="mono val">0.1020</td>
-        <td class="mono val">5.571</td>
-    </tr>
-    
-    <tr>
-        <td>Luminus</td>
-        <td>Essential</td>
-        <td>42.4</td>
-        <td class="mono val">0.0776</td>
-        <td class="mono val">22.534</td>
-    </tr>
-    
-    <tr>
-        <td>Luminus</td>
-        <td>Eco+</td>
-        <td>79.5</td>
-        <td class="mono val">0.0769</td>
-        <td class="mono val">22.674</td>
-    </tr>
-    </tbody></table>
+        <tr>
+            <td>DATS24</td>
+            <td>Variable</td>
+            <td>35.04</td>
+            <td class="mono val">0.1088</td>
+            <td class="mono val">0.592</td>
+        </tr>
+        
+        <tr>
+            <td>Engie</td>
+            <td>Flow</td>
+            <td>53.0</td>
+            <td class="mono val">0.1067</td>
+            <td class="mono val">0.980</td>
+        </tr>
+        
+        <tr>
+            <td>Eneco</td>
+            <td>Soleil &amp; Vent Flex</td>
+            <td>65</td>
+            <td class="mono val">0.1020</td>
+            <td class="mono val">5.571</td>
+        </tr>
+        
+        <tr>
+            <td>Luminus</td>
+            <td>Essential</td>
+            <td>42.4</td>
+            <td class="mono val">0.0776</td>
+            <td class="mono val">22.534</td>
+        </tr>
+        
+        <tr>
+            <td>Luminus</td>
+            <td>Eco+</td>
+            <td>79.5</td>
+            <td class="mono val">0.0769</td>
+            <td class="mono val">22.674</td>
+        </tr>
+        </tbody></table>
 </div>
 </div>
-<div class="cell" data-execution_count="323">
-<div class="cell-output cell-output-display" data-execution_count="323">
+<div class="cell" data-execution_count="364">
+<div class="cell-output cell-output-display" data-execution_count="364">
 
 
-<table class="contracts_table">
-    <tbody><tr><th colspan="5">Contrats non-dominés, bihoraire</th></tr>
-    <tr>
-        <th rowspan="2">Fournisseur</th>
-        <th rowspan="2">Contrat</th>
-        <th rowspan="2">Coût fixe (€/an)</th>
-        <th colspan="2" class="day">Bihoraire (moyenne 50/50)</th>
-    </tr>
-    <tr>
-        <th class="day">x</th>
-        <th class="day">y</th>
-    </tr>
-
-    <tr>
-        <td>DATS24</td>
-        <td>Variable</td>
-        <td>35.04</td>
-        <td class="day val">0.1140</td>
-        <td class="day val">0.592</td>
-    </tr>
+    <table class="contracts_table">
+        <tbody><tr><th colspan="5">Contrats non-dominés, monohoraire, BRUXELLES</th></tr>
+        <tr>
+            <th rowspan="2">Fournisseur</th>
+            <th rowspan="2">Contrat</th>
+            <th rowspan="2">Coût fixe (€/an)</th>
+            <th colspan="2" class="mono">Monohoraire</th>
+        </tr>
+        <tr>
+            <th class="mono">x</th>
+            <th class="mono">y</th>
+        </tr>
     
-    <tr>
-        <td>Engie</td>
-        <td>Flow</td>
-        <td>53.0</td>
-        <td class="day val">0.1077</td>
-        <td class="day val">0.690</td>
-    </tr>
-    
-    <tr>
-        <td>Eneco</td>
-        <td>Soleil &amp; Vent Flex</td>
-        <td>65</td>
-        <td class="day val">0.1020</td>
-        <td class="day val">5.585</td>
-    </tr>
-    
-    <tr>
-        <td>Luminus</td>
-        <td>Essential</td>
-        <td>42.4</td>
-        <td class="day val">0.0777</td>
-        <td class="day val">22.421</td>
-    </tr>
-    </tbody></table>
+        <tr>
+            <td>Engie</td>
+            <td>Flow</td>
+            <td>53.0</td>
+            <td class="mono val">0.1067</td>
+            <td class="mono val">0.980</td>
+        </tr>
+        </tbody></table>
 </div>
 </div>
-<p>Tout les contrats éléminés, sous nos hypothèses, sont strictement plus cher que ceux qui restent (et donc nuls™). Parmi ceux qui restent, lesquels choisir? Eh bien cela dépend du prix de marché. Les contrats les plus en haut de chaque tableau ont un très petit <span class="math inline">\(y\)</span> mais un <span class="math inline">\(x\)</span> large. Avec de faible prix de marché, le biais <span class="math inline">\(y\)</span> des contrats devient prépondérant dans la valeur de l’énergie, et ces contrats seront favorisés.</p>
+<div class="cell" data-execution_count="366">
+<div class="cell-output cell-output-display" data-execution_count="366">
+
+
+    <table class="contracts_table">
+        <tbody><tr><th colspan="5">Contrats non-dominés, bihoraire, WALLONIE</th></tr>
+        <tr>
+            <th rowspan="2">Fournisseur</th>
+            <th rowspan="2">Contrat</th>
+            <th rowspan="2">Coût fixe (€/an)</th>
+            <th colspan="2" class="day">Bihoraire</th>
+        </tr>
+        <tr>
+            <th class="day">x</th>
+            <th class="day">y</th>
+        </tr>
+    
+        <tr>
+            <td>DATS24</td>
+            <td>Variable</td>
+            <td>35.04</td>
+            <td class="day val">0.1140</td>
+            <td class="day val">0.592</td>
+        </tr>
+        
+        <tr>
+            <td>Engie</td>
+            <td>Flow</td>
+            <td>53.0</td>
+            <td class="day val">0.1077</td>
+            <td class="day val">0.690</td>
+        </tr>
+        
+        <tr>
+            <td>Eneco</td>
+            <td>Soleil &amp; Vent Flex</td>
+            <td>65</td>
+            <td class="day val">0.1020</td>
+            <td class="day val">5.585</td>
+        </tr>
+        
+        <tr>
+            <td>Luminus</td>
+            <td>Essential</td>
+            <td>42.4</td>
+            <td class="day val">0.0777</td>
+            <td class="day val">22.421</td>
+        </tr>
+        </tbody></table>
+</div>
+</div>
+<div class="cell" data-execution_count="367">
+<div class="cell-output cell-output-display" data-execution_count="367">
+
+
+    <table class="contracts_table">
+        <tbody><tr><th colspan="5">Contrats non-dominés, bihoraire, BRUXELLES</th></tr>
+        <tr>
+            <th rowspan="2">Fournisseur</th>
+            <th rowspan="2">Contrat</th>
+            <th rowspan="2">Coût fixe (€/an)</th>
+            <th colspan="2" class="day">Bihoraire</th>
+        </tr>
+        <tr>
+            <th class="day">x</th>
+            <th class="day">y</th>
+        </tr>
+    
+        <tr>
+            <td>Engie</td>
+            <td>Flow</td>
+            <td>53.0</td>
+            <td class="day val">0.1077</td>
+            <td class="day val">0.690</td>
+        </tr>
+        </tbody></table>
+</div>
+</div>
+<p>Tout les contrats éléminés, sous nos hypothèses, sont strictement plus cher que ceux qui restent (et donc nuls™). Pour Bruxelles le choix est simple: il ne reste qu’un contrat, Engie Flow, grand gagnant.</p>
+<p>Parmi ceux qui restent en Wallonie, lesquels choisir? Eh bien cela dépend du prix de marché. Les contrats les plus en haut de chaque tableau ont un très petit <span class="math inline">\(y\)</span> mais un <span class="math inline">\(x\)</span> large. Avec de faible prix de marché, le biais <span class="math inline">\(y\)</span> des contrats devient prépondérant dans la valeur de l’énergie, et ces contrats seront favorisés.</p>
 <p>Inversement, si les prix de marché sont élévés, le biais <span class="math inline">\(y\)</span> va devenir insignifiant par rapport à la marge proportionnelle prise via <span class="math inline">\(x\)</span>, et les contrats du fond des tableaux seront meilleurs.</p>
 <p>On peut donc mesurer les intervalles entre lesquels chaque contrat est le meilleur. Par la magie des maths (et plus spécifiquement des équations linéaires) on va encore trouver d’autres contrats dominés.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
@@ -1413,12 +1775,12 @@ Note
 <p>Par exemple, en monohoraire, le contrat d’Eneco et Luminus-Essential se croisent à 693€/MWh. Mais le contrat Engie-Flow et celui d’Eneco se croisent à 982€/MWh: autrement dit, Engie-Flow est moins cher jusqu’à 982€. On en conclus que le contrat d’Eneco est toujours dominé.</p>
 </div>
 </div>
-<div class="cell" data-execution_count="326">
-<div class="cell-output cell-output-display" data-execution_count="326">
+<div class="cell" data-execution_count="372">
+<div class="cell-output cell-output-display" data-execution_count="372">
 
 
 <table class="contracts_table">
-    <tbody><tr><th colspan="6">Contrats non-dominés, monohoraire</th></tr>
+    <tbody><tr><th colspan="6">Contrats non-dominés, monohoraire, Wallonie (bis)</th></tr>
     <tr>
         <th rowspan="2">Fournisseur</th>
         <th rowspan="2">Contrat</th>
@@ -1460,12 +1822,12 @@ Note
     </tbody></table>
 </div>
 </div>
-<div class="cell" data-execution_count="325">
-<div class="cell-output cell-output-display" data-execution_count="325">
+<div class="cell" data-execution_count="373">
+<div class="cell-output cell-output-display" data-execution_count="373">
 
 
 <table class="contracts_table">
-    <tbody><tr><th colspan="6">Contrats non-dominés, bihoraire</th></tr>
+    <tbody><tr><th colspan="6">Contrats non-dominés, bihoraire, Wallonie (bis)</th></tr>
     <tr>
         <th rowspan="2">Fournisseur</th>
         <th rowspan="2">Contrat</th>
