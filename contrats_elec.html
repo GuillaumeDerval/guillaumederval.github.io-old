@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Les contrats ⚡ pour les nuls motivés</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="contrats_elec_files/libs/clipboard/clipboard.min.js"></script>
+<script src="contrats_elec_files/libs/quarto-html/quarto.js"></script>
+<script src="contrats_elec_files/libs/quarto-html/popper.min.js"></script>
+<script src="contrats_elec_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="contrats_elec_files/libs/quarto-html/anchor.min.js"></script>
+<link href="contrats_elec_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="contrats_elec_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="contrats_elec_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="contrats_elec_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="contrats_elec_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#les-bases" id="toc-les-bases" class="nav-link active" data-scroll-target="#les-bases">Les bases</a></li>
+  <li><a href="#comment-lire-un-contrat-délectricité" id="toc-comment-lire-un-contrat-délectricité" class="nav-link" data-scroll-target="#comment-lire-un-contrat-délectricité">Comment lire un contrat d’électricité</a></li>
+  <li><a href="#les-différents-contrats-disponibles" id="toc-les-différents-contrats-disponibles" class="nav-link" data-scroll-target="#les-différents-contrats-disponibles">Les différents contrats disponibles</a></li>
+  <li><a href="#les-différents-indices" id="toc-les-différents-indices" class="nav-link" data-scroll-target="#les-différents-indices">Les différents indices</a>
+  <ul class="collapse">
+  <li><a href="#le-marché-day-ahead-belpex_m-belpex_q-belpex_m_rlp-belpex_q_rlp" id="toc-le-marché-day-ahead-belpex_m-belpex_q-belpex_m_rlp-belpex_q_rlp" class="nav-link" data-scroll-target="#le-marché-day-ahead-belpex_m-belpex_q-belpex_m_rlp-belpex_q_rlp">Le marché day-ahead: <code>belpex_m</code>, <code>belpex_q</code>, <code>belpex_m_rlp</code>, <code>belpex_q_rlp</code></a></li>
+  <li><a href="#le-marché-future-endex103-endex303-et-endexxyz-en-général" id="toc-le-marché-future-endex103-endex303-et-endexxyz-en-général" class="nav-link" data-scroll-target="#le-marché-future-endex103-endex303-et-endexxyz-en-général">Le marché “future”: <code>endex103</code>, <code>endex303</code>, et <code>endexXYZ</code> en général</a></li>
+  <li><a href="#les-tarifs-composites" id="toc-les-tarifs-composites" class="nav-link" data-scroll-target="#les-tarifs-composites">Les tarifs composites</a></li>
+  </ul></li>
+  <li><a href="#un-récapitulatif-des-indices" id="toc-un-récapitulatif-des-indices" class="nav-link" data-scroll-target="#un-récapitulatif-des-indices">Un récapitulatif des indices</a></li>
+  <li><a href="#a-la-recherche-du-meilleur-contrat" id="toc-a-la-recherche-du-meilleur-contrat" class="nav-link" data-scroll-target="#a-la-recherche-du-meilleur-contrat">A la recherche du meilleur contrat</a></li>
+  <li><a href="#pro-tips-pour-changer-de-contrat" id="toc-pro-tips-pour-changer-de-contrat" class="nav-link" data-scroll-target="#pro-tips-pour-changer-de-contrat">Pro-tips pour changer de contrat</a></li>
+  <li><a href="#questions-ouvertes" id="toc-questions-ouvertes" class="nav-link" data-scroll-target="#questions-ouvertes">Questions ouvertes</a></li>
+  <li><a href="#todo" id="toc-todo" class="nav-link" data-scroll-target="#todo">TODO</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Les contrats ⚡ pour les nuls motivés</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>Le marché des contrats de fourniture d’électricté est pour l’instant particulièrement complexe. Plus aucun fournisseurs ne propose de contrat fixe, ou alors à des prix prohibitifs. Les contrats variables sont très difficile à lire. Ils se basent sur des indices externes pour définir les prix, d’une manière à la fois précise et difficile à comprendre.</p>
+<p>Dans ce document je détaille mes pérégrinations dans le monde merveilleux des fournisseurs. On tentera de répondre aux questions suivantes:</p>
+<ul>
+<li>Comment sont mis à jour les prix?</li>
+<li>Sur quelle base?</li>
+<li>Comment choisir un bon contrat?</li>
+<li>Quel est le meilleure contrat disponible?</li>
+<li>Et si j’étais ministre, qu’est-ce que je devrais faire pour améliorer la situation?</li>
+</ul>
+<p>Ce guide a été écrit début novembre 2022, et contient des données datant de ce moment.</p>
+<section id="les-bases" class="level2">
+<h2 class="anchored" data-anchor-id="les-bases">Les bases</h2>
+<p>Un rappel des unités: l’énergie consommée est généralement notée en kWh (kilo-Watt-heure). Il s’agit de la consommation d’un appareil de 1000 Watts (=1kW) pendant une heure. Pensez par exemple à un aspirateur qui tourne pendant une heure. Une famille “moyenne”, sans chauffage electrique, consomme dans les environs de 3500kWh par an. Je parlerai également régulièrement de MWh (Mega-Watt-heure), qui sont en fait simplement 1000 kWh. Les contrats d’électricité sont généralement facturés à l’échelle du kWh, et les prix sont en centimes d’euro par kWh, noté c€/kWh.</p>
+<p>Notez que les contrats d’électricités proposent généralement un prix par mois ou par trimestre. Ces prix changent à la fin de chaque période. Les prix indiqués dans les contrats ne comprennent généralement que le prix de l’énergie elle-même (ce que vous devez au fournisseur), mais vous avez en plus les différents frais et taxes liés au transport et à la distribution de l’électricité, que vous devez à Elia (le transporteur haute-tension) ou à votre GRD (Ores/RESA/…) mais que votre fournisseur récupère pour eux.</p>
+<p>On va donc ici se concentrer uniquement sur les prix de l’énergie et pas sur ces frais divers, qui sont <strong>identiques</strong> chez tout les fournisseurs, par définition.</p>
+<p>Egalement, notez que votre fournisseur ne connait (presque) jamais votre consommation mensuelle d’électricité. Un ménage installé ne relève son compteur qu’un fois par an. L’exception étant les déménagements et les changements de fournisseurs.</p>
+<p>Etant donné que votre fournisseur émet un prix différent chaque mois, il est nécessaire de “distribuer” votre consommation annuelle (la différence entre votre relevé de cette année et celui de l’année dernière) sur chaque mois. A cette fin, les fournisseurs d’énergie utilisent tous une courbe de consommation “typique” du ménage “moyen”, basés sur les relévés du réseau. Ces courbes “<strong>RLP</strong>” (Real Load Profiles) sont distribuées par Synergrid. Voici la courbe des ménages qui sont chez Ores-Namur:</p>
+<div class="cell" data-execution_count="175">
+<div class="cell-output cell-output-display">
+<p><img src="contrats_elec_files/figure-html/cell-4-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>On consomme moins d’électricité en été, plus en hiver. Il faut y voir l’impact</p>
+<ul>
+<li>du chauffage électrique (même si vous n’en avez pas, on parle ici du belge “moyen”)</li>
+<li>de la nécessité d’allumer plus la lumière</li>
+<li>de la plus grande présence chez soit</li>
+<li>(entre autres choses)</li>
+</ul>
+<p>Même si vous consommez différement, vous payerez votre énergie comme si vous aviez suivi <strong>exactement</strong> cette répartition. Que vous ayez du chauffage électrique ou pas, que vous ayez passé 3 mois dans un pays chaud en plein hiver, peu importe. Vous êtes facturé sur cette base. C’est valable aussi si vous avez un compteur intelligent, du moins en Wallonie: les fournisseurs n’en tiennent pas encore compte.</p>
+<p>Les seuls moyens d’obliger un fournisseur à vous faire payer exactement ce que vous avez consommé est de changer de contrat chaque mois (car cela entraîne un relevé de compteur). Malheureusement, cela n’est pas une bonne idée, comme on va le voir plus loin.</p>
+</section>
+<section id="comment-lire-un-contrat-délectricité" class="level2">
+<h2 class="anchored" data-anchor-id="comment-lire-un-contrat-délectricité">Comment lire un contrat d’électricité</h2>
+<p>Les fournisseurs ont tous signés un charte avec le régulateur du marché (la CREG) et se sont engagés à fournir des “cartes tarifaires” plus ou moins standardisées et lisible. Ce n’est en fait pas vraiment le cas.</p>
+<p>Voici un screenshot de la carte tarifaire du contrat Flow de Engie, pour la Wallonie:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="contrats_elec/engie_flow.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Un exemple de contrat</figcaption><p></p>
+</figure>
+</div>
+<p>L’oeil est immédiatement attiré par la section “prix indexés de l’énergie”. On vous donne des prix trimestriels (qui seront dons mis à jour chaque trimestre), et une estimation de prix annuel.</p>
+<p>Pourtant, ces prix sont une illusion. Pour beaucoup de contrats, ils ne contiennent simplement pas le prix que vous allez payer ce mois/trimestre/année. Si je surligne les parties effectivement utiles du contrat, on obtient ceci:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="contrats_elec/engie_flow_important.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">La partie réellement importante en jaune</figcaption><p></p>
+</figure>
+</div>
+<p>Oui, c’est majoritairement dans les petits caractères. Voici une copie du texte:</p>
+<ul>
+<li>Redevance fixe: 53€/an</li>
+<li>Le prix de l’électricité est indexé mensuellement.</li>
+<li>Le paramètre d’indexation est la moyenne arithmétique des cotations journalières Day Ahead EPEX SPOT Belgium (ci-après EPEX DAM) durant le mois de fourniture.</li>
+<li>La valeur du EPEX DAM du mois en cours ne sera connue qu’en fin de mois [les prix sont donc informatifs]</li>
+<li>Les formules de calcul des prix sont les suivantes:
+<ul>
+<li>Normal = 0,9800 + 0,1067 x EPEX DAM</li>
+<li>Tarif bihoraire heures pleines = 0,7900 + 0,1177 x EPEX DAM</li>
+<li>Tarif bihoraire heures creuses = 0,5900 + 0,0978 x EPEX DAM</li>
+<li>Exclusif nuit = 0,5900 + 0,0978 x EPEX DAM</li>
+</ul></li>
+</ul>
+<p>Passons ligne par ligne sur le contenu du texte.</p>
+<p>Tout d’abord, on vous signale que la redevance fixe est de <strong>53€/an</strong>. Cette redevance est généralement dûe en intégralité pour toute année de contrat commencée, donc il s’agit d’un moyen d’empècher les consommateurs de changer trop souvent de fournisseur. Prenez en compte cette redevance quand vous changez “avant la fin de l’année” de fournisseur.</p>
+<p>Ensuite on vous explique que les prix du contrat changent chaque mois, en suivant le *<em>grande inspiration</em>* “Day Ahead EPEX SPOT Belgium”. Sous ce nom se cache en fait le marché “achat au jour le jour” de gros de l’électricité, aussi appelé le Belpex. Il s’agit d’un des (nombreux) marchés sur lequel les fournisseurs peuvent acheter leur énergie avant de vous la revendre (on rapelle que la majorité des fournisseurs ne produisent pas l’énergie qu’ils vendent).</p>
+<p>Il est indiqué dans le contrat que le prix <em>du mois M</em> (disons, Janvier) est calculé <em>à la fin de ce mois M</em> (donc le 31 Janvier) sur base de la moyenne des prix journaliers du Belpex durant ce mois M (toujours Janvier). Par exemple, si le prix sur le belpex a été de 100€/MWh dans les deux premières semaines de Janvier, puis à 150€/MWh les deux suivantes, l’indice “EXPEX DAM” utilisé dans le contrat vaudra 125€/MWh. On ne connait donc pas le prix de l’énergie au moment où on la consomme!</p>
+<p>Ce système, basé sur des marchés “day-ahead” (achat le jour d’avant pour le jour d’après) est à mettre en parallele avec les contrats basés sur les marchés “futures”, où on va regarder, par exemple, durant le mois M à quel prix le marché nous vend l’énergie du mois M+1, et facturer le mois M+1 aux consommateurs finaux à ce prix là. Dans ce système, le prix du mois courant est connue à l’avance.</p>
+<p>Il existe une <strong>véritable jungle</strong> d’indices différents. Certains sont calculés par mois, d’autre par trimestres. Certains sur du day-ahead, d’autres sur du future. D’autres encore sur différentes périodes. J’y reviens plus loin dans ce document. Concentrons nous en attendant sur le véritable coeur de la fiche tarifaire: les formules de calcul.</p>
+<p>Pour rappel, il existe 4 “méthode de facturation de l’énergie”, en fonction de votre type de compteur. Les ménages disposant de compteurs “normaux” paient un tarif unique (nommé au dessus “normal”). Les compteurs bihoraires disposent de deux tarifs, le tarif d’heure pleine (en journée en semaine) et celui d’heure creuse (généralement entre 22h et 7h ainsi que le week-end). Il existe aussi des compteurs “exclusifs nuit”, utilisés généralement pour le chauffage électrique. Chaque contrat propose donc quatre formule de calcul. Je me concentre dans la suite de ce document sur le tarif “normal”.</p>
+<p>Les tarifs sont partout calculés comme suit: “<span class="math inline">\(x * \text{indice} + y\)</span>”. <span class="math inline">\(x\)</span> est appelé le multiplicateur et <span class="math inline">\(y\)</span> le biais. Dans notre contrat Flow ci-dessus, on nous donne “Normal = 0,9800 + 0,1067 x EPEX DAM”, donc: <span class="math display">\[x=0.1067, y=0.98, \text{indice} = \text{EPEX DAM}\]</span></p>
+<p>Le biais <span class="math inline">\(y\)</span> est une valeur en c€/kWh que le fournisseur prend peu importe la valeur de l’indice utilisé. Ensuite le fourni prend une certaine marge proportionnelle à la valeur de l’indice via <span class="math inline">\(x\)</span>.</p>
+<p>EPEX DAM étant donné en €/MWh, il y a dans la valeur de <span class="math inline">\(x\)</span> une conversion implicite vers du c€/kWh. En gros vous pouvez simplement retenir qu’en multipliant par 100 la valeur de <span class="math inline">\(x\)</span> on obtient le pourcentage de l’indice utilisé dans le prix final. Ici cela donne <span class="math inline">\(106.7\%\)</span>, donc Engie prend <span class="math inline">\(6.7\%\)</span> de marge sur la valeur du Belpex.</p>
+<p>J’espère que vous suivez toujours! Ces indices, multiplicateurs et biais sont en dur dans votre contrat; votre fournisseur ne peut pas en changer après la signature.</p>
+<p><strong>La “bonne” manière de comparer les contrats n’est donc pas de regarder leur prix à un moment T, mais de comparer les frais fixes, les indices utilisés, les biais et multiplicateurs.</strong></p>
+</section>
+<section id="les-différents-contrats-disponibles" class="level2">
+<h2 class="anchored" data-anchor-id="les-différents-contrats-disponibles">Les différents contrats disponibles</h2>
+<p>J’ai ici listés les différents contrats disponibles en Novembre 2022 en Wallonie. Les prix sont souvent identiques à Bxl, mais je n’ai pas vérifié. Notez que les tarifs changent chaque mois, y compris les multiplicateurs, biais, et indices. Le meilleur contrat à un mois donné peut devenir beaucoup moins bon le mois suivant!</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Je me dois de signaler que j’ai demandé à la CREG (le régulateur fédéral) de me fournir une liste des contrats existant et historique pour écrire ce poste de blog. Ils ont (de leur aveu) une telle base de donnée, mais ont refusés de me la faire parvenir au motif que ma demande était “abusive”.</p>
+<p>Il est désespérant que j’aie à refaire le travail d’un organisme public et que par ailleurs il refuse de partager une information qui devrait être publique, ne serait-ce que par bon sens, mais également légalement, via la loi sur la publicité de l’administration.</p>
+</div>
+</div>
+<div class="cell" data-execution_count="119">
+<div class="cell-output cell-output-display" data-execution_count="119">
+
+
+<style type="text/css">
+    .contracts_table tr td {
+        padding: 3px 10px;
+    }
+    .contracts_table th {
+        text-align: center;
+    }
+    
+    .contracts_table .mono {
+        background-color: rgba(255, 0, 0, 0.3);
+        
+    }
+    
+    .contracts_table .day {
+        background-color: rgba(255, 255, 0, 0.3);
+    }
+    
+    .contracts_table .night {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .contracts_table .excl_night {
+        background-color: rgba(0, 0, 100, 0.3);
+    }
+    
+    .contracts_table .val {
+        text-align: right;
+    }
+    
+    .contracts_table tr:nth-child(even) {
+        background-color: #dedede;
+    }
+    
+    .contracts_table tr:nth-child(even):hover {
+        background-color: #bbdede;
+    }
+    
+    .contracts_table tr:nth-child(odd):hover {
+        background-color: #aacdcd;
+    }
+</style>
+<table class="contracts_table">
+    <tbody><tr>
+        <th rowspan="2">Fournisseur</th>
+        <th rowspan="2">Contrat</th>
+        <th rowspan="2">Coût fixe (€/an)</th>
+        <th rowspan="2">Indice</th>
+        <th colspan="2" class="mono">Monohoraire<br>☀️/🌙</th>
+        <th colspan="2" class="day">Bihoraire ☀️</th>
+        <th colspan="2" class="night">Bihoraire 🌙</th>
+        <th colspan="2" class="excl_night">Exclusif nuit 🌡️</th>
+    </tr>
+    <tr>
+        <th class="mono">x</th>
+        <th class="mono">y</th>
+        <th class="day">x</th>
+        <th class="day">y</th>
+        <th class="night">x</th>
+        <th class="night">y</th>
+        <th class="excl_night">x</th>
+        <th class="excl_night">y</th>
+    </tr>
+
+    <tr>
+        <td>Luminus</td>
+        <td>ComfyFlex</td>
+        <td>63.6</td>
+        <td>belpex_q</td>
+        <td class="mono val">0.1128</td>
+        <td class="mono val">4.441</td>
+        <td class="day val">0.1350</td>
+        <td class="day val">4.348</td>
+        <td class="night val">0.0940</td>
+        <td class="night val">4.000</td>
+        <td class="excl_night val">0.0940</td>
+        <td class="excl_night val">4.000</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>ComfyFlex+</td>
+        <td>63.6</td>
+        <td>belpex_q</td>
+        <td class="mono val">0.1128</td>
+        <td class="mono val">6.441</td>
+        <td class="day val">0.1350</td>
+        <td class="day val">6.348</td>
+        <td class="night val">0.0940</td>
+        <td class="night val">6.000</td>
+        <td class="excl_night val">0.0940</td>
+        <td class="excl_night val">6.000</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Actif+</td>
+        <td>79.5</td>
+        <td>EMarketCWE</td>
+        <td class="mono val">0.1160</td>
+        <td class="mono val">22.674</td>
+        <td class="day val">0.1364</td>
+        <td class="day val">24.886</td>
+        <td class="night val">0.0961</td>
+        <td class="night val">20.226</td>
+        <td class="excl_night val">0.0961</td>
+        <td class="excl_night val">20.226</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Basic</td>
+        <td>21.2</td>
+        <td>belpex_q</td>
+        <td class="mono val">0.1128</td>
+        <td class="mono val">0.970</td>
+        <td class="day val">0.1350</td>
+        <td class="day val">1.520</td>
+        <td class="night val">0.0940</td>
+        <td class="night val">1.270</td>
+        <td class="excl_night val">0.0940</td>
+        <td class="excl_night val">1.270</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Eco+</td>
+        <td>79.5</td>
+        <td>EMarketCWE</td>
+        <td class="mono val">0.1150</td>
+        <td class="mono val">22.674</td>
+        <td class="day val">0.1304</td>
+        <td class="day val">24.886</td>
+        <td class="night val">0.1022</td>
+        <td class="night val">20.226</td>
+        <td class="excl_night val">0.1022</td>
+        <td class="excl_night val">20.226</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Ecoflex</td>
+        <td>68.9</td>
+        <td>EMarketCWE</td>
+        <td class="mono val">0.1150</td>
+        <td class="mono val">22.687</td>
+        <td class="day val">0.1304</td>
+        <td class="day val">24.715</td>
+        <td class="night val">0.1022</td>
+        <td class="night val">20.486</td>
+        <td class="excl_night val">0.1022</td>
+        <td class="excl_night val">20.486</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Essential</td>
+        <td>42.4</td>
+        <td>EMarketCWE</td>
+        <td class="mono val">0.1160</td>
+        <td class="mono val">22.534</td>
+        <td class="day val">0.1364</td>
+        <td class="day val">22.622</td>
+        <td class="night val">0.0961</td>
+        <td class="night val">22.221</td>
+        <td class="excl_night val">0.0961</td>
+        <td class="excl_night val">22.221</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Optimal</td>
+        <td>53.0</td>
+        <td>EMarketCWE</td>
+        <td class="mono val">0.1160</td>
+        <td class="mono val">23.264</td>
+        <td class="day val">0.1364</td>
+        <td class="day val">25.402</td>
+        <td class="night val">0.0961</td>
+        <td class="night val">20.951</td>
+        <td class="excl_night val">0.0961</td>
+        <td class="excl_night val">20.951</td>
+    </tr>
+    
+    <tr>
+        <td>TotalEnergies</td>
+        <td>Pixel</td>
+        <td>25</td>
+        <td>belpex_m_rlp</td>
+        <td class="mono val">0.1063</td>
+        <td class="mono val">3.150</td>
+        <td class="day val">0.1250</td>
+        <td class="day val">3.150</td>
+        <td class="night val">0.0930</td>
+        <td class="night val">3.150</td>
+        <td class="excl_night val">0.0950</td>
+        <td class="excl_night val">3.000</td>
+    </tr>
+    
+    <tr>
+        <td>TotalEnergies</td>
+        <td>Pixel Blue</td>
+        <td>70</td>
+        <td>belpex_m_rlp</td>
+        <td class="mono val">0.1063</td>
+        <td class="mono val">3.200</td>
+        <td class="day val">0.1250</td>
+        <td class="day val">3.200</td>
+        <td class="night val">0.0930</td>
+        <td class="night val">3.200</td>
+        <td class="excl_night val">0.0950</td>
+        <td class="excl_night val">3.050</td>
+    </tr>
+    
+    <tr>
+        <td>Eneco</td>
+        <td>Soleil &amp; Vent Variable</td>
+        <td>65</td>
+        <td>endex103</td>
+        <td class="mono val">0.1000</td>
+        <td class="mono val">6.810</td>
+        <td class="day val">0.1000</td>
+        <td class="day val">14.740</td>
+        <td class="night val">0.1000</td>
+        <td class="night val">0.416</td>
+        <td class="excl_night val">0.1000</td>
+        <td class="excl_night val">0.416</td>
+    </tr>
+    
+    <tr>
+        <td>Eneco</td>
+        <td>Soleil &amp; Vent Flex</td>
+        <td>65</td>
+        <td>belpex_q_rlp</td>
+        <td class="mono val">0.1000</td>
+        <td class="mono val">5.571</td>
+        <td class="day val">0.1000</td>
+        <td class="day val">5.711</td>
+        <td class="night val">0.1000</td>
+        <td class="night val">5.458</td>
+        <td class="excl_night val">0.1000</td>
+        <td class="excl_night val">5.458</td>
+    </tr>
+    
+    <tr>
+        <td>Engie</td>
+        <td>Easy</td>
+        <td>58.3</td>
+        <td>endex103</td>
+        <td class="mono val">0.1091</td>
+        <td class="mono val">4.495</td>
+        <td class="day val">0.1336</td>
+        <td class="day val">4.514</td>
+        <td class="night val">0.0898</td>
+        <td class="night val">3.718</td>
+        <td class="excl_night val">0.0898</td>
+        <td class="excl_night val">3.718</td>
+    </tr>
+    
+    <tr>
+        <td>Engie</td>
+        <td>Flow</td>
+        <td>53.0</td>
+        <td>belpex_m</td>
+        <td class="mono val">0.1067</td>
+        <td class="mono val">0.980</td>
+        <td class="day val">0.1177</td>
+        <td class="day val">0.790</td>
+        <td class="night val">0.0978</td>
+        <td class="night val">0.590</td>
+        <td class="excl_night val">0.0978</td>
+        <td class="excl_night val">0.590</td>
+    </tr>
+    
+    <tr>
+        <td>Engie</td>
+        <td>Direct</td>
+        <td>26.34</td>
+        <td>belpex_m</td>
+        <td class="mono val">0.1081</td>
+        <td class="mono val">2.836</td>
+        <td class="day val">0.1303</td>
+        <td class="day val">2.916</td>
+        <td class="night val">0.0883</td>
+        <td class="night val">2.707</td>
+        <td class="excl_night val">0.0883</td>
+        <td class="excl_night val">2.707</td>
+    </tr>
+    
+    <tr>
+        <td>DATS24</td>
+        <td>Variable</td>
+        <td>35.04</td>
+        <td>belpex_m_rlp</td>
+        <td class="mono val">0.1067</td>
+        <td class="mono val">0.592</td>
+        <td class="day val">0.1269</td>
+        <td class="day val">0.592</td>
+        <td class="night val">0.0967</td>
+        <td class="night val">0.592</td>
+        <td class="excl_night val">0.0967</td>
+        <td class="excl_night val">0.592</td>
+    </tr>
+    
+    <tr>
+        <td>OCTA+</td>
+        <td>Eco Chill</td>
+        <td>130.0</td>
+        <td>belpex_m_rlp</td>
+        <td class="mono val">0.1127</td>
+        <td class="mono val">1.250</td>
+        <td class="day val">0.1284</td>
+        <td class="day val">1.250</td>
+        <td class="night val">0.0971</td>
+        <td class="night val">1.250</td>
+        <td class="excl_night val">0.1027</td>
+        <td class="excl_night val">1.250</td>
+    </tr>
+    
+    <tr>
+        <td>OCTA+</td>
+        <td>Chill</td>
+        <td>65.0</td>
+        <td>belpex_m_rlp</td>
+        <td class="mono val">0.1127</td>
+        <td class="mono val">1.000</td>
+        <td class="day val">0.1284</td>
+        <td class="day val">1.000</td>
+        <td class="night val">0.0971</td>
+        <td class="night val">1.000</td>
+        <td class="excl_night val">0.1027</td>
+        <td class="excl_night val">1.000</td>
+    </tr>
+    
+    <tr>
+        <td>MEGA</td>
+        <td>Smart</td>
+        <td>42.4</td>
+        <td>belpex_m</td>
+        <td class="mono val">0.1195</td>
+        <td class="mono val">2.550</td>
+        <td class="day val">0.1425</td>
+        <td class="day val">2.550</td>
+        <td class="night val">0.1065</td>
+        <td class="night val">2.550</td>
+        <td class="excl_night val">0.1065</td>
+        <td class="excl_night val">2.550</td>
+    </tr>
+    
+    <tr>
+        <td>MEGA</td>
+        <td>Online</td>
+        <td>15.9</td>
+        <td>belpex_m</td>
+        <td class="mono val">0.1150</td>
+        <td class="mono val">1.200</td>
+        <td class="day val">0.1150</td>
+        <td class="day val">1.200</td>
+        <td class="night val">0.1150</td>
+        <td class="night val">1.200</td>
+        <td class="excl_night val">0.1150</td>
+        <td class="excl_night val">1.200</td>
+    </tr>
+    
+    <tr>
+        <td>MEGA</td>
+        <td>Cosy</td>
+        <td>58.3</td>
+        <td>belpex_m</td>
+        <td class="mono val">0.1195</td>
+        <td class="mono val">2.550</td>
+        <td class="day val">0.1425</td>
+        <td class="day val">2.550</td>
+        <td class="night val">0.1065</td>
+        <td class="night val">2.550</td>
+        <td class="excl_night val">0.1065</td>
+        <td class="excl_night val">2.550</td>
+    </tr>
+    
+    <tr>
+        <td>MEGA</td>
+        <td>Group</td>
+        <td>68.9</td>
+        <td>belpex_m</td>
+        <td class="mono val">0.1150</td>
+        <td class="mono val">2.550</td>
+        <td class="day val">0.1150</td>
+        <td class="day val">2.550</td>
+        <td class="night val">0.1150</td>
+        <td class="night val">2.550</td>
+        <td class="excl_night val">0.1150</td>
+        <td class="excl_night val">2.550</td>
+    </tr>
+    </tbody></table>
+</div>
+</div>
+<p>On voit qu’il y a une pléthore d’offre différentes. Et encore, le nombre de contrat différent a été considérablement réduit depuis le début de la crise énergétique.</p>
+<p>Pour un client possédant un compteur monohoraire, la comparaison se révèle compliquée: il y a plusieurs indices différents. Pour le client en bihoraire, la tâche est encore plus hardue: il y a deux fois plus de paramètres à considérer!</p>
+<p>On peut tenter de simplifier quelque peu cette grille pour le bihoraire, en regardant la répartition “moyenne” de consommation en heure pleine et en heure creuse, via les courbes RLP dont on a discuté plus haut. Cela donne en gros que c’est 50/50. Le ménage “moyen” consomme autant en heure creuse qu’en heure pleine. Faisons cette hypothèse à partir de maintenant. On va aussi abandonner l’analyse de l’exclusif nuit, qui concerne une minorité.</p>
+<div class="cell" data-execution_count="126">
+<div class="cell-output cell-output-display" data-execution_count="126">
+
+
+<table class="contracts_table">
+    <tbody><tr>
+        <th rowspan="2">Fournisseur</th>
+        <th rowspan="2">Contrat</th>
+        <th rowspan="2">Coût fixe (€/an)</th>
+        <th rowspan="2">Indice</th>
+        <th colspan="2" class="mono">Monohoraire</th>
+        <th colspan="2" class="day">Bihoraire (moyenne)</th>
+    </tr>
+    <tr>
+        <th class="mono">x</th>
+        <th class="mono">y</th>
+        <th class="day">x</th>
+        <th class="day">y</th>
+    </tr>
+
+    <tr>
+        <td>Luminus</td>
+        <td>ComfyFlex</td>
+        <td>63.6</td>
+        <td>belpex_q</td>
+        <td class="mono val">0.1128</td>
+        <td class="mono val">4.441</td>
+        <td class="day val">0.1145</td>
+        <td class="day val">4.174</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>ComfyFlex+</td>
+        <td>63.6</td>
+        <td>belpex_q</td>
+        <td class="mono val">0.1128</td>
+        <td class="mono val">6.441</td>
+        <td class="day val">0.1145</td>
+        <td class="day val">6.174</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Actif+</td>
+        <td>79.5</td>
+        <td>EMarketCWE</td>
+        <td class="mono val">0.1160</td>
+        <td class="mono val">22.674</td>
+        <td class="day val">0.1162</td>
+        <td class="day val">22.556</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Basic</td>
+        <td>21.2</td>
+        <td>belpex_q</td>
+        <td class="mono val">0.1128</td>
+        <td class="mono val">0.970</td>
+        <td class="day val">0.1145</td>
+        <td class="day val">1.395</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Eco+</td>
+        <td>79.5</td>
+        <td>EMarketCWE</td>
+        <td class="mono val">0.1150</td>
+        <td class="mono val">22.674</td>
+        <td class="day val">0.1163</td>
+        <td class="day val">22.556</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Ecoflex</td>
+        <td>68.9</td>
+        <td>EMarketCWE</td>
+        <td class="mono val">0.1150</td>
+        <td class="mono val">22.687</td>
+        <td class="day val">0.1163</td>
+        <td class="day val">22.600</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Essential</td>
+        <td>42.4</td>
+        <td>EMarketCWE</td>
+        <td class="mono val">0.1160</td>
+        <td class="mono val">22.534</td>
+        <td class="day val">0.1162</td>
+        <td class="day val">22.421</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Optimal</td>
+        <td>53.0</td>
+        <td>EMarketCWE</td>
+        <td class="mono val">0.1160</td>
+        <td class="mono val">23.264</td>
+        <td class="day val">0.1162</td>
+        <td class="day val">23.176</td>
+    </tr>
+    
+    <tr>
+        <td>TotalEnergies</td>
+        <td>Pixel</td>
+        <td>25</td>
+        <td>belpex_m_rlp</td>
+        <td class="mono val">0.1063</td>
+        <td class="mono val">3.150</td>
+        <td class="day val">0.1090</td>
+        <td class="day val">3.150</td>
+    </tr>
+    
+    <tr>
+        <td>TotalEnergies</td>
+        <td>Pixel Blue</td>
+        <td>70</td>
+        <td>belpex_m_rlp</td>
+        <td class="mono val">0.1063</td>
+        <td class="mono val">3.200</td>
+        <td class="day val">0.1090</td>
+        <td class="day val">3.200</td>
+    </tr>
+    
+    <tr>
+        <td>Eneco</td>
+        <td>Soleil &amp; Vent Variable</td>
+        <td>65</td>
+        <td>endex103</td>
+        <td class="mono val">0.1000</td>
+        <td class="mono val">6.810</td>
+        <td class="day val">0.1000</td>
+        <td class="day val">7.578</td>
+    </tr>
+    
+    <tr>
+        <td>Eneco</td>
+        <td>Soleil &amp; Vent Flex</td>
+        <td>65</td>
+        <td>belpex_q_rlp</td>
+        <td class="mono val">0.1000</td>
+        <td class="mono val">5.571</td>
+        <td class="day val">0.1000</td>
+        <td class="day val">5.585</td>
+    </tr>
+    
+    <tr>
+        <td>Engie</td>
+        <td>Easy</td>
+        <td>58.3</td>
+        <td>endex103</td>
+        <td class="mono val">0.1091</td>
+        <td class="mono val">4.495</td>
+        <td class="day val">0.1117</td>
+        <td class="day val">4.116</td>
+    </tr>
+    
+    <tr>
+        <td>Engie</td>
+        <td>Flow</td>
+        <td>53.0</td>
+        <td>belpex_m</td>
+        <td class="mono val">0.1067</td>
+        <td class="mono val">0.980</td>
+        <td class="day val">0.1077</td>
+        <td class="day val">0.690</td>
+    </tr>
+    
+    <tr>
+        <td>Engie</td>
+        <td>Direct</td>
+        <td>26.34</td>
+        <td>belpex_m</td>
+        <td class="mono val">0.1081</td>
+        <td class="mono val">2.836</td>
+        <td class="day val">0.1093</td>
+        <td class="day val">2.811</td>
+    </tr>
+    
+    <tr>
+        <td>DATS24</td>
+        <td>Variable</td>
+        <td>35.04</td>
+        <td>belpex_m_rlp</td>
+        <td class="mono val">0.1067</td>
+        <td class="mono val">0.592</td>
+        <td class="day val">0.1118</td>
+        <td class="day val">0.592</td>
+    </tr>
+    
+    <tr>
+        <td>OCTA+</td>
+        <td>Eco Chill</td>
+        <td>130.0</td>
+        <td>belpex_m_rlp</td>
+        <td class="mono val">0.1127</td>
+        <td class="mono val">1.250</td>
+        <td class="day val">0.1127</td>
+        <td class="day val">1.250</td>
+    </tr>
+    
+    <tr>
+        <td>OCTA+</td>
+        <td>Chill</td>
+        <td>65.0</td>
+        <td>belpex_m_rlp</td>
+        <td class="mono val">0.1127</td>
+        <td class="mono val">1.000</td>
+        <td class="day val">0.1127</td>
+        <td class="day val">1.000</td>
+    </tr>
+    
+    <tr>
+        <td>MEGA</td>
+        <td>Smart</td>
+        <td>42.4</td>
+        <td>belpex_m</td>
+        <td class="mono val">0.1195</td>
+        <td class="mono val">2.550</td>
+        <td class="day val">0.1245</td>
+        <td class="day val">2.550</td>
+    </tr>
+    
+    <tr>
+        <td>MEGA</td>
+        <td>Online</td>
+        <td>15.9</td>
+        <td>belpex_m</td>
+        <td class="mono val">0.1150</td>
+        <td class="mono val">1.200</td>
+        <td class="day val">0.1150</td>
+        <td class="day val">1.200</td>
+    </tr>
+    
+    <tr>
+        <td>MEGA</td>
+        <td>Cosy</td>
+        <td>58.3</td>
+        <td>belpex_m</td>
+        <td class="mono val">0.1195</td>
+        <td class="mono val">2.550</td>
+        <td class="day val">0.1245</td>
+        <td class="day val">2.550</td>
+    </tr>
+    
+    <tr>
+        <td>MEGA</td>
+        <td>Group</td>
+        <td>68.9</td>
+        <td>belpex_m</td>
+        <td class="mono val">0.1150</td>
+        <td class="mono val">2.550</td>
+        <td class="day val">0.1150</td>
+        <td class="day val">2.550</td>
+    </tr>
+    </tbody></table>
+</div>
+</div>
+</section>
+<section id="les-différents-indices" class="level2">
+<h2 class="anchored" data-anchor-id="les-différents-indices">Les différents indices</h2>
+<p>Je décris ici les différents indices. Le but est à la fin de pouvoir les comparer efficacement.</p>
+<section id="le-marché-day-ahead-belpex_m-belpex_q-belpex_m_rlp-belpex_q_rlp" class="level3">
+<h3 class="anchored" data-anchor-id="le-marché-day-ahead-belpex_m-belpex_q-belpex_m_rlp-belpex_q_rlp">Le marché day-ahead: <code>belpex_m</code>, <code>belpex_q</code>, <code>belpex_m_rlp</code>, <code>belpex_q_rlp</code></h3>
+<p>Le marché day-ahead, est, comme je l’expliquais plus haut, le marché où un fournisseur peut acheter au jour J l’électricité qu’il doit fournir au jour J+1. Ce marché est régulé et supervisé par des règles européennes, notamment de transparence. Son historique est librement accessible.</p>
+<p>Il en existe un par pays. Pour la Belgique, il s’agit du Belpex, aussi appelé EPEX DAM, EPEX SPOT, BELPEX SPOT, et d’autres variantes. Au cours de chaque journée, les différents opérateurs sur le marché s’échange l’énergie heure par heure pour le lendemain. On obtient donc, chaque jour, 24 prix, un pour chaque heure de la journée. Le prix de la journée est la moyenne de ces prix.</p>
+<p>Voici la forme qu’à pris le Belpex ces derniers mois:</p>
+<div class="cell" data-execution_count="136">
+<div class="cell-output cell-output-display">
+<p><img src="contrats_elec_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Vu que le prix n’est connu qu’au jour-le-jour, le tarif auquel vous payez votre énergie dans un contrat basé sur Belpex n’est pas connu au moment où vous consommez votre électricité: elle ne l’est qu’en fin de mois ou de trimestre, après coup.</p>
+<p>A partir de là, on définit différents indices:</p>
+<section id="belpex_m-moyenne-mensuelle" class="level4">
+<h4 class="anchored" data-anchor-id="belpex_m-moyenne-mensuelle"><code>belpex_m</code>, moyenne mensuelle</h4>
+<p><code>belpex_m</code> est la moyenne des cotations (journalières ou horaire, c’est la même chose) du Belpex pour un mois donné. Le prix du mois de Novembre 2022 sera donc la moyenne des cotations entre le 1ier Novembre 2022 et le 30 Novembre 2022.</p>
+<p>Voici le graphique de la valeur du <code>belpex_m</code>. La valeur pour novembre est la moyenne du mois arrétée à la date de dernière mise à jour de cet article.</p>
+<div class="cell" data-execution_count="185">
+<div class="cell-output cell-output-display">
+<p><img src="contrats_elec_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="belpex_q-moyenne-trimestrielle" class="level4">
+<h4 class="anchored" data-anchor-id="belpex_q-moyenne-trimestrielle"><code>belpex_q</code>, moyenne trimestrielle</h4>
+<p><code>belpex_q</code> (<code>q</code> pour ‘quarter’ ou trimestre en anglais) est la moyenne des cotations (journalières ou horaire, c’est la même chose) du Belpex pour un trimestre donné. Le prix du mois de Novembre 2022 sera donc la moyenne des cotations entre le 1ier Octobre 2022 et le 31 Decembre 2022, le trimestre dans lequel se trouve le mois de Novembre.</p>
+<p>On a la propriété que pour un certain trimestre Q (disons, le 4ième) contenant les mois M, M+1 et M+2 (Octobre, Novembre, Décembre par exemple), le prix du <code>belpex_q</code> pour le trimestre Q est la moyenne du <code>belpex_m</code> pour les trois mois du trimestre. Autrement dit, le prix du dernier trimestre est égal à la moyenne des prix des mois du trimestre. Mais vous ne consommez pas de manière égale chaque mois…</p>
+<div class="cell" data-execution_count="184">
+<div class="cell-output cell-output-display">
+<p><img src="contrats_elec_files/figure-html/cell-12-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="belpex_m_rlp-et-belpex_q_rlp-moyennes-pondérées" class="level4">
+<h4 class="anchored" data-anchor-id="belpex_m_rlp-et-belpex_q_rlp-moyennes-pondérées"><code>belpex_m_rlp</code> et <code>belpex_q_rlp</code>, moyennes pondérées</h4>
+<p>Une variante très utilisée des indices ci-dessus est leur version pondérée par la courbe RLP (souvenez-vous, c’est la courbe de la consommation moyenne des ménages). L’idée est que si un ménage moyen consomme plus un certain jour plutôt qu’un autre, ce premier jour devrait compter “plus” dans la moyenne que l’autre.</p>
+<p>Cela permet au fournisseur de coller plus à ses coûts effectifs (les jours où les ménages consomment “plus”, il doit effectivement acheter “plus” d’électricité), et cela à un effet mathématique intéressant: on a la propriété que si un ménage consomme comme le ménage moyen (en suivi la courbe RLP), alors le prix facturé à un ménage ayant un tarif basé sur <code>belpex_m_rlp</code> (mensuel) sera identique que s’il était sur <code>belpex_q_rlp</code> (trimestriel).</p>
+<p>Les indices pondérés par RLP sont toujours un peu plus cher, en moyenne de 2%, car on consomme plus au moment où les prix sont plus chers (en fait c’est l’inverse: les prix sont plus chers car on consomme plus ;-))</p>
+<div class="cell" data-execution_count="182">
+<div class="cell-output cell-output-display">
+<p><img src="contrats_elec_files/figure-html/cell-14-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="183">
+<div class="cell-output cell-output-display">
+<p><img src="contrats_elec_files/figure-html/cell-15-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="en-résumé-pour-le-belpex-quelle-différence" class="level4">
+<h4 class="anchored" data-anchor-id="en-résumé-pour-le-belpex-quelle-différence">En résumé, pour le Belpex, quelle différence?</h4>
+<p>En pratique il y a très peu de différence entre ces quatres indices. Les différences seront subtiles et vraiment à la marge, certainement inférieures à 5%. On peut s’amuser à faire le calcul pour le ménage “moyen”, suivant la courbe RLP.</p>
+<div class="cell" data-execution_count="239">
+<div class="cell-output cell-output-display" data-execution_count="239">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Indice</th>
+<th style="text-align: left;">prix moyen 2021</th>
+<th style="text-align: left;">prix moyen 2022</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>belpex_m</code></td>
+<td style="text-align: left;">107.00 €/MWh</td>
+<td style="text-align: left;">226.46 €/MWh</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>belpex_q</code></td>
+<td style="text-align: left;">105.85 €/MWh</td>
+<td style="text-align: left;">230.85 €/MWh</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>belpex_m_rlp</code></td>
+<td style="text-align: left;">109.85 €/MWh</td>
+<td style="text-align: left;">229.97 €/MWh</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>belpex_q_rlp</code></td>
+<td style="text-align: left;">109.85 €/MWh</td>
+<td style="text-align: left;">233.23 €/MWh</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Notez bien que les prix de 2022 sont jusqu’au milieu du mois de Novembre, ce qui casse légèrement la propriété énoncée ci-dessus pour les contrats pondérés RLP (<code>q</code>=<code>m</code>), même si ça reste vrai pour des années complètes (on le voit pour 2021).</p>
+<p>On voit que la différence est très limitée, et que le meilleur indice dépend de l’année. On tentera donc de prendre un contrat non-pondéré par RLP, mais pas d’inquiétude concernant la durée d’indexation (si ce n’est pour avoir une meilleure visibilité).</p>
+</section>
+</section>
+<section id="le-marché-future-endex103-endex303-et-endexxyz-en-général" class="level3">
+<h3 class="anchored" data-anchor-id="le-marché-future-endex103-endex303-et-endexxyz-en-général">Le marché “future”: <code>endex103</code>, <code>endex303</code>, et <code>endexXYZ</code> en général</h3>
+<p>Le marché “future”, aussi appelé Endex, permet d’acheter de l’énergie qui sera livrée plus tard. Ce “plus tard” peut être très variable: on peut acheter de l’énergie pour le mois prochain, pour dans deux mois, pour un autre trimestre, pour dans deux ans… et ce à des durées variables: pour un mois, pour un trimestre, voire pour une année complète.</p>
+<p>Il est donc possible de construire beaucoup d’indices différents. Dans les contrats listés plus tôt dans ce billet de blog, l’indice utilisé en général est <code>endex103</code>. Le <code>103</code> signifie qu’on va regarder le prix moyen de l’électricité pour livraison durant le trimestre pendant le mois précédent le trimestre.</p>
+<p>Par exemple, pour le quatrième trimestre de 2022, <code>endex103</code> est le prix moyen d’acheter, au cours du mois de Septembre, de l’énergie pour livraison au dernier trimestre.</p>
+<p>D’autres formules sont possibles. La règle générale est la suivante: pour <code>endexXYZ</code> (pour <code>endex103</code>, on a donc <span class="math inline">\(X=1\)</span>, <span class="math inline">\(Y=0\)</span> et <span class="math inline">\(Z=3\)</span>), le prix pour les mois <span class="math inline">\(M+1\)</span> jusque <span class="math inline">\(M+Z\)</span> sont calculés à partir du prix d’achat de l’énergie pour ces mêmes mois aux mois <span class="math inline">\(M-Y\)</span> jusque <span class="math inline">\(M-Y-X+1\)</span>. Pour <code>endex303</code> le prix pour <span class="math inline">\(M+1=\text{Octobre}, M+2=\text{Novembre}, M+3=\text{Décembre}\)</span> est calculé sur la base du prix d’achat de l’énergie, pour livraison durant ces mois, pendant les mois de <span class="math inline">\(M-0-0=\text{Septembre}, M-0-1=\text{Aout}, M-0-2=\text{Juillet}\)</span>. Pour <code>endex-12-0-12</code> il s’agit donc du prix moyen de livraison d’une année pendant l’année précédente (on regarde les prix en 2021 pour livraison en 2022). Pour <code>endex-12-12-12</code>, on décale: on regarde les prix de 2020 pour livraison en 2022.</p>
+<p>J’espère que vous êtes encore avec moi. Le plus dur est passé, je pense.</p>
+<p>A la différence d’un indice <em>day-ahead</em>, les indices <em>future</em> ont l’avantage d’être connu <em>avant la consommation</em>. Etant donné qu’on se base sur les prix des mois précédents, le prix auquel vous consommez votre énergie est connu à l’avance.</p>
+<p>Voici les prix récents de <code>endex103</code>:</p>
+<div class="cell" data-execution_count="246">
+<div class="cell-output cell-output-display">
+<p><img src="contrats_elec_files/figure-html/cell-18-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>500€/MWh ce trimestre (fin 2022)!</p>
+<section id="pourquoi-une-telle-différence-avec-le-belpex" class="level4">
+<h4 class="anchored" data-anchor-id="pourquoi-une-telle-différence-avec-le-belpex">Pourquoi une telle différence avec le belpex?</h4>
+<p>Contrairement à ce qu’on pourrait croire (ou pas), le marché est très mauvais pour prédire les prix de l’électricité future. On pourrait s’attendre à ce que le tarif endex de livraison au mois d’octobre acheté en septembre, soit proche du prix day-ahead du mois d’octobre.</p>
+<p>Il n’est est rien, et en fait, le prix endex d’aujourd’hui pour le futur proche est correlé avec le prix day-ahead d’aujourd’hui:</p>
+<div class="cell" data-execution_count="252">
+<div class="cell-output cell-output-display">
+<p><img src="contrats_elec_files/figure-html/cell-20-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Sur ce graphique, on voit le prix d’acheter de l’énergie “pour demain” (day-ahead, <code>belpex M</code>) ou “pour le mois prochain” (future, <code>endex M+1</code>). On voit un très, très forte corrélation entre les deux. On remarque aussi qu’en général le prix “future” est légèrement plus élévé.</p>
+<p>La raison de l’explosion du tarif <code>endex103</code> c’est qu’au mois d’aout/septembre, on a vu une explosion des marchés day-ahead et future dûs à l’incertitude liée à la guerre en Ukraine ET à l’état des centrales nucléaires en France, massivement et exceptionnelement en panne. En cas de forte incertitude, les marchés future ont tendance à accroitre leur tarif par “sécurité”. Le prix excessif de septembre s’est donc retrouvé “gardé” pour tout le trimestre fin 2022.</p>
+<p>On peut en tirer les conclusions suivantes:</p>
+<ul>
+<li>Les tarifs “pour demain” et “pour le futur proche” sont généralement très similaires</li>
+<li>Donc, les tarifs basés sur endex sont un décalage des tarifs belpex</li>
+<li>Donc, il est intéressant d’avoir un tarif endex quand le marché monte (pour garder les prix bas passés plus longtemps) et d’avoir un tarif belpex quand le marché descend (pour éviter les prix passés très cher)</li>
+</ul>
+<p>Voici le même graphique pour le trimestre suivant:</p>
+<div class="cell" data-execution_count="255">
+<div class="cell-output cell-output-display">
+<p><img src="contrats_elec_files/figure-html/cell-22-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="les-tarifs-composites" class="level3">
+<h3 class="anchored" data-anchor-id="les-tarifs-composites">Les tarifs composites</h3>
+<p>Le seul tarif composite utilisé actuellement est le <code>EMarketCWE</code>. Il est en fait une moyenne entre <code>endex-12-12-12</code>, <code>endex-12-0-12</code> et <code>endex303</code>. Autrement dit, pour, disons, le 4ième trimestre 2022, il est la moyenne entre:</p>
+<ul>
+<li><code>endex-12-12-12</code>: Le prix d’achat d’énergie pour tout 2022, achetée en 2020</li>
+<li><code>endex-12-0-12</code>: Le prix d’achat d’énergie pour tout 2022, achetée en 2021</li>
+<li><code>endex303</code>: Le prix d’achat d’énergie pour le 4ième trimestre 2022, achetée lors du 3ième trimestre 2022.</li>
+</ul>
+<p>Bien que <code>endex303</code> soit extrèmement cher ce trimestre (500€/MWh), les autres sont très faibles: on ne savait pas en 2020 et en 2021 que la guerre en Ukraine allait arriver ou que le parc nucléaire français allait souffrir, et on était même en plein milieu de la crise du covid!</p>
+<div class="cell" data-execution_count="260">
+<div class="cell-output cell-output-display">
+<p><img src="contrats_elec_files/figure-html/cell-24-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Ce tarif permet donc d’avoir un indice largement en dessous des prix de marché. Alléchant. Malheureusement, le fournisseur qui utilise cet indice, Luminus, n’est pas dupe: pour compenser le prix extrèmement bas de l’indice, il ajoute un bais (le <span class="math inline">\(y\)</span> dans le tableau des contrats) très élevé pour compenser. Ce qui fait qu’aucun contrat basé sur <code>eMarketCWE</code> n’est intéressant pour l’instant.</p>
+</section>
+</section>
+<section id="un-récapitulatif-des-indices" class="level2">
+<h2 class="anchored" data-anchor-id="un-récapitulatif-des-indices">Un récapitulatif des indices</h2>
+<ul>
+<li>Le Belpex, pour l’instant, est le seul bon choix, vu les prix exorbitant du endex103/endex303 pour ce trimestre.</li>
+<li>En général, les tarifs endex (“future”) ont tendance à être un peu plus cher que les tarifs belpex (“day-ahead”)</li>
+</ul>
+</section>
+<section id="a-la-recherche-du-meilleur-contrat" class="level2">
+<h2 class="anchored" data-anchor-id="a-la-recherche-du-meilleur-contrat">A la recherche du meilleur contrat</h2>
+<p>Maintenant que l’on a une bonne idée des différents indices, on peut comparer les différents contrats. A cette fin, nous allons poser quelques hypothèses.</p>
+<p>La première, c’est qu’on va tenter de tout mettre en rapport avec <code>belpex_m</code> et <code>belpex_q</code>. Pour chaque contrat sur un indice différent, on va les “convertir” vers ces indices. Pour cela on va calculer les différences de prix moyennes entre chaque indice sur 2021 et 2022.</p>
+<div class="cell" data-execution_count="274">
+<div class="cell-output cell-output-display" data-execution_count="274">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Indice</th>
+<th style="text-align: right;">Pourcentage de différence avec belpex, moyenne</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>endex103</code></td>
+<td style="text-align: right;">22.18</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>belpex_m</code></td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>belpex_q</code></td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>belpex_m_rlp</code></td>
+<td style="text-align: right;">1.97</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>belpex_q_rlp</code></td>
+<td style="text-align: right;">2.02</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>EMarketCWE</code></td>
+<td style="text-align: right;">-33.14</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>On peut ensuite reprendre notre tableau des contrats au dessus, et convertir les multiplicateurs, en faisant comme si tout était du <code>belpex_m</code>:</p>
+<div class="cell" data-execution_count="283">
+<div class="cell-output cell-output-display" data-execution_count="283">
+
+
+<table class="contracts_table">
+    <tbody><tr>
+        <th rowspan="2">Fournisseur</th>
+        <th rowspan="2">Contrat</th>
+        <th rowspan="2">Coût fixe (€/an)</th>
+        <th colspan="2" class="mono">Monohoraire</th>
+        <th colspan="2" class="day">Bihoraire (moyenne 50/50)</th>
+    </tr>
+    <tr>
+        <th class="mono">x</th>
+        <th class="mono">y</th>
+        <th class="day">x</th>
+        <th class="day">y</th>
+    </tr>
+
+    <tr>
+        <td>Luminus</td>
+        <td>ComfyFlex</td>
+        <td>63.6</td>
+        <td class="mono val">0.1128</td>
+        <td class="mono val">4.441</td>
+        <td class="day val">0.1145</td>
+        <td class="day val">4.174</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>ComfyFlex+</td>
+        <td>63.6</td>
+        <td class="mono val">0.1128</td>
+        <td class="mono val">6.441</td>
+        <td class="day val">0.1145</td>
+        <td class="day val">6.174</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Actif+</td>
+        <td>79.5</td>
+        <td class="mono val">0.0776</td>
+        <td class="mono val">22.674</td>
+        <td class="day val">0.0777</td>
+        <td class="day val">22.556</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Basic</td>
+        <td>21.2</td>
+        <td class="mono val">0.1128</td>
+        <td class="mono val">0.970</td>
+        <td class="day val">0.1145</td>
+        <td class="day val">1.395</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Eco+</td>
+        <td>79.5</td>
+        <td class="mono val">0.0769</td>
+        <td class="mono val">22.674</td>
+        <td class="day val">0.0778</td>
+        <td class="day val">22.556</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Ecoflex</td>
+        <td>68.9</td>
+        <td class="mono val">0.0769</td>
+        <td class="mono val">22.687</td>
+        <td class="day val">0.0778</td>
+        <td class="day val">22.600</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Essential</td>
+        <td>42.4</td>
+        <td class="mono val">0.0776</td>
+        <td class="mono val">22.534</td>
+        <td class="day val">0.0777</td>
+        <td class="day val">22.421</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Optimal</td>
+        <td>53.0</td>
+        <td class="mono val">0.0776</td>
+        <td class="mono val">23.264</td>
+        <td class="day val">0.0777</td>
+        <td class="day val">23.176</td>
+    </tr>
+    
+    <tr>
+        <td>TotalEnergies</td>
+        <td>Pixel</td>
+        <td>25</td>
+        <td class="mono val">0.1084</td>
+        <td class="mono val">3.150</td>
+        <td class="day val">0.1111</td>
+        <td class="day val">3.150</td>
+    </tr>
+    
+    <tr>
+        <td>TotalEnergies</td>
+        <td>Pixel Blue</td>
+        <td>70</td>
+        <td class="mono val">0.1084</td>
+        <td class="mono val">3.200</td>
+        <td class="day val">0.1111</td>
+        <td class="day val">3.200</td>
+    </tr>
+    
+    <tr>
+        <td>Eneco</td>
+        <td>Soleil &amp; Vent Variable</td>
+        <td>65</td>
+        <td class="mono val">0.1222</td>
+        <td class="mono val">6.810</td>
+        <td class="day val">0.1222</td>
+        <td class="day val">7.578</td>
+    </tr>
+    
+    <tr>
+        <td>Eneco</td>
+        <td>Soleil &amp; Vent Flex</td>
+        <td>65</td>
+        <td class="mono val">0.1020</td>
+        <td class="mono val">5.571</td>
+        <td class="day val">0.1020</td>
+        <td class="day val">5.585</td>
+    </tr>
+    
+    <tr>
+        <td>Engie</td>
+        <td>Easy</td>
+        <td>58.3</td>
+        <td class="mono val">0.1333</td>
+        <td class="mono val">4.495</td>
+        <td class="day val">0.1365</td>
+        <td class="day val">4.116</td>
+    </tr>
+    
+    <tr>
+        <td>Engie</td>
+        <td>Flow</td>
+        <td>53.0</td>
+        <td class="mono val">0.1067</td>
+        <td class="mono val">0.980</td>
+        <td class="day val">0.1077</td>
+        <td class="day val">0.690</td>
+    </tr>
+    
+    <tr>
+        <td>Engie</td>
+        <td>Direct</td>
+        <td>26.34</td>
+        <td class="mono val">0.1081</td>
+        <td class="mono val">2.836</td>
+        <td class="day val">0.1093</td>
+        <td class="day val">2.811</td>
+    </tr>
+    
+    <tr>
+        <td>DATS24</td>
+        <td>Variable</td>
+        <td>35.04</td>
+        <td class="mono val">0.1088</td>
+        <td class="mono val">0.592</td>
+        <td class="day val">0.1140</td>
+        <td class="day val">0.592</td>
+    </tr>
+    
+    <tr>
+        <td>OCTA+</td>
+        <td>Eco Chill</td>
+        <td>130.0</td>
+        <td class="mono val">0.1149</td>
+        <td class="mono val">1.250</td>
+        <td class="day val">0.1150</td>
+        <td class="day val">1.250</td>
+    </tr>
+    
+    <tr>
+        <td>OCTA+</td>
+        <td>Chill</td>
+        <td>65.0</td>
+        <td class="mono val">0.1149</td>
+        <td class="mono val">1.000</td>
+        <td class="day val">0.1150</td>
+        <td class="day val">1.000</td>
+    </tr>
+    
+    <tr>
+        <td>MEGA</td>
+        <td>Smart</td>
+        <td>42.4</td>
+        <td class="mono val">0.1195</td>
+        <td class="mono val">2.550</td>
+        <td class="day val">0.1245</td>
+        <td class="day val">2.550</td>
+    </tr>
+    
+    <tr>
+        <td>MEGA</td>
+        <td>Online</td>
+        <td>15.9</td>
+        <td class="mono val">0.1150</td>
+        <td class="mono val">1.200</td>
+        <td class="day val">0.1150</td>
+        <td class="day val">1.200</td>
+    </tr>
+    
+    <tr>
+        <td>MEGA</td>
+        <td>Cosy</td>
+        <td>58.3</td>
+        <td class="mono val">0.1195</td>
+        <td class="mono val">2.550</td>
+        <td class="day val">0.1245</td>
+        <td class="day val">2.550</td>
+    </tr>
+    
+    <tr>
+        <td>MEGA</td>
+        <td>Group</td>
+        <td>68.9</td>
+        <td class="mono val">0.1150</td>
+        <td class="mono val">2.550</td>
+        <td class="day val">0.1150</td>
+        <td class="day val">2.550</td>
+    </tr>
+    </tbody></table>
+</div>
+</div>
+<p>Une seconde hypothèse que l’on va poser, c’est que l’on néglige les coûts fixes liés aux contrats. Ils devraient être faible vis-a-vis des économies à faire, de toute manière. On peut ensuite entreprendre de supprimer tout les contrats “dominés”, c’est à dire tel qu’un autre contrat a en même temps un <span class="math inline">\(x\)</span> et un <span class="math inline">\(y\)</span> plus petit. Un tel contrat sera toujours plus cher.</p>
+<div class="cell" data-execution_count="299">
+<div class="cell-output cell-output-display" data-execution_count="299">
+
+
+<table class="contracts_table">
+    <tbody><tr><th colspan="5">Contrats non-dominés, monohoraire</th></tr>
+    <tr>
+        <th rowspan="2">Fournisseur</th>
+        <th rowspan="2">Contrat</th>
+        <th rowspan="2">Coût fixe (€/an)</th>
+        <th colspan="2" class="mono">Monohoraire</th>
+    </tr>
+    <tr>
+        <th class="mono">x</th>
+        <th class="mono">y</th>
+    </tr>
+
+    <tr>
+        <td>DATS24</td>
+        <td>Variable</td>
+        <td>35.04</td>
+        <td class="mono val">0.1088</td>
+        <td class="mono val">0.592</td>
+    </tr>
+    
+    <tr>
+        <td>Engie</td>
+        <td>Flow</td>
+        <td>53.0</td>
+        <td class="mono val">0.1067</td>
+        <td class="mono val">0.980</td>
+    </tr>
+    
+    <tr>
+        <td>Eneco</td>
+        <td>Soleil &amp; Vent Flex</td>
+        <td>65</td>
+        <td class="mono val">0.1020</td>
+        <td class="mono val">5.571</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Essential</td>
+        <td>42.4</td>
+        <td class="mono val">0.0776</td>
+        <td class="mono val">22.534</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Eco+</td>
+        <td>79.5</td>
+        <td class="mono val">0.0769</td>
+        <td class="mono val">22.674</td>
+    </tr>
+    </tbody></table>
+</div>
+</div>
+<div class="cell" data-execution_count="323">
+<div class="cell-output cell-output-display" data-execution_count="323">
+
+
+<table class="contracts_table">
+    <tbody><tr><th colspan="5">Contrats non-dominés, bihoraire</th></tr>
+    <tr>
+        <th rowspan="2">Fournisseur</th>
+        <th rowspan="2">Contrat</th>
+        <th rowspan="2">Coût fixe (€/an)</th>
+        <th colspan="2" class="day">Bihoraire (moyenne 50/50)</th>
+    </tr>
+    <tr>
+        <th class="day">x</th>
+        <th class="day">y</th>
+    </tr>
+
+    <tr>
+        <td>DATS24</td>
+        <td>Variable</td>
+        <td>35.04</td>
+        <td class="day val">0.1140</td>
+        <td class="day val">0.592</td>
+    </tr>
+    
+    <tr>
+        <td>Engie</td>
+        <td>Flow</td>
+        <td>53.0</td>
+        <td class="day val">0.1077</td>
+        <td class="day val">0.690</td>
+    </tr>
+    
+    <tr>
+        <td>Eneco</td>
+        <td>Soleil &amp; Vent Flex</td>
+        <td>65</td>
+        <td class="day val">0.1020</td>
+        <td class="day val">5.585</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Essential</td>
+        <td>42.4</td>
+        <td class="day val">0.0777</td>
+        <td class="day val">22.421</td>
+    </tr>
+    </tbody></table>
+</div>
+</div>
+<p>Tout les contrats éléminés, sous nos hypothèses, sont strictement plus cher que ceux qui restent (et donc nuls™). Parmi ceux qui restent, lesquels choisir? Eh bien cela dépend du prix de marché. Les contrats les plus en haut de chaque tableau ont un très petit <span class="math inline">\(y\)</span> mais un <span class="math inline">\(x\)</span> large. Avec de faible prix de marché, le biais <span class="math inline">\(y\)</span> des contrats devient prépondérant dans la valeur de l’énergie, et ces contrats seront favorisés.</p>
+<p>Inversement, si les prix de marché sont élévés, le biais <span class="math inline">\(y\)</span> va devenir insignifiant par rapport à la marge proportionnelle prise via <span class="math inline">\(x\)</span>, et les contrats du fond des tableaux seront meilleurs.</p>
+<p>On peut donc mesurer les intervalles entre lesquels chaque contrat est le meilleur. Par la magie des maths (et plus spécifiquement des équations linéaires) on va encore trouver d’autres contrats dominés.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Par exemple, en monohoraire, le contrat d’Eneco et Luminus-Essential se croisent à 693€/MWh. Mais le contrat Engie-Flow et celui d’Eneco se croisent à 982€/MWh: autrement dit, Engie-Flow est moins cher jusqu’à 982€. On en conclus que le contrat d’Eneco est toujours dominé.</p>
+</div>
+</div>
+<div class="cell" data-execution_count="326">
+<div class="cell-output cell-output-display" data-execution_count="326">
+
+
+<table class="contracts_table">
+    <tbody><tr><th colspan="6">Contrats non-dominés, monohoraire</th></tr>
+    <tr>
+        <th rowspan="2">Fournisseur</th>
+        <th rowspan="2">Contrat</th>
+        <th rowspan="2">Coût fixe (€/an)</th>
+        <th colspan="2" class="mono">Monohoraire</th>
+        <th rowspan="2" class="mono">Meilleur à partir de</th>
+    </tr>
+    <tr>
+        <th class="mono">x</th>
+        <th class="mono">y</th>
+    </tr>
+
+    <tr>
+        <td>DATS24</td>
+        <td>Variable</td>
+        <td>35.04</td>
+        <td class="mono val">0.1088</td>
+        <td class="mono val">0.592</td>
+        <td class="mono val">0.0 €/MWh</td>
+    </tr>
+    
+    <tr>
+        <td>Engie</td>
+        <td>Flow</td>
+        <td>53.0</td>
+        <td class="mono val">0.1067</td>
+        <td class="mono val">0.980</td>
+        <td class="mono val">184.8 €/MWh</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Eco+</td>
+        <td>79.5</td>
+        <td class="mono val">0.0769</td>
+        <td class="mono val">22.674</td>
+        <td class="mono val">727.6 €/MWh</td>
+    </tr>
+    </tbody></table>
+</div>
+</div>
+<div class="cell" data-execution_count="325">
+<div class="cell-output cell-output-display" data-execution_count="325">
+
+
+<table class="contracts_table">
+    <tbody><tr><th colspan="6">Contrats non-dominés, bihoraire</th></tr>
+    <tr>
+        <th rowspan="2">Fournisseur</th>
+        <th rowspan="2">Contrat</th>
+        <th rowspan="2">Coût fixe (€/an)</th>
+        <th colspan="2" class="day">Bihoraire</th>
+        <th rowspan="2" class="day">Meilleur à partir de</th>
+    </tr>
+    <tr>
+        <th class="day">x</th>
+        <th class="day">y</th>
+    </tr>
+
+    <tr>
+        <td>DATS24</td>
+        <td>Variable</td>
+        <td>35.04</td>
+        <td class="day val">0.1140</td>
+        <td class="day val">0.592</td>
+        <td class="day val">0.0 €/MWh</td>
+    </tr>
+    
+    <tr>
+        <td>Engie</td>
+        <td>Flow</td>
+        <td>53.0</td>
+        <td class="day val">0.1077</td>
+        <td class="day val">0.690</td>
+        <td class="day val">15.7 €/MWh</td>
+    </tr>
+    
+    <tr>
+        <td>Luminus</td>
+        <td>Essential</td>
+        <td>42.4</td>
+        <td class="day val">0.0777</td>
+        <td class="day val">22.421</td>
+        <td class="day val">723.7 €/MWh</td>
+    </tr>
+    </tbody></table>
+</div>
+</div>
+<p>Etant donné les prix de marchés oscillant actuellement entre 100 et 200 €/MWh, la différence entre le contrat DATS24-Variable et Engie-Flow est faible pour le mono-horaire. Pour le bihoraire, Engie-Flow sort grand gagnant.</p>
+<p>En règle générale, je ne peux que conseiller Engie-Flow, ou son grand frère Engie-Direct. Engie-Direct est un peu plus cher au niveau de l’énergie, mais moins au niveau des coûts fixes. Pour le consomatteur moyen, cela devrait revenir approximativement au même. Par ailleurs, Engie-Flow n’est pas disponbile sur le site internet d’Engie (uniquement via le chat ou par téléphone, apparement), alors que Direct oui.</p>
+<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Danger
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>ATTENTION: on parle ici du meilleur contrat d’électricité! Ne prenez pas le contrat de gaz nommé Flow chez Engie, qui est particulièrement mauvais par rapport à Direct, par exemple.</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Rien ne vous empèche d’avoir un fournisseur différent pour le gaz et l’élec, ni d’avoir deux types de contrats chez un même fournisseur (par exemple Engie-flow pour l’élec et Engie-direct pour le gaz).</p>
+</div>
+</div>
+<p>Par ailleurs, Engie propose un contrat basé sur <code>endex103</code>. Bien qu’il s’agisse d’un des plus mauvais contrat du marché ce semestre, il pourrait peut-être devenir intéressant dans le futur, et Engie ne facture pas de nouveau les prix fixes quand on change de type de contrat en <em>restant</em> client. Pratique!</p>
+</section>
+<section id="pro-tips-pour-changer-de-contrat" class="level2">
+<h2 class="anchored" data-anchor-id="pro-tips-pour-changer-de-contrat">Pro-tips pour changer de contrat</h2>
+<ul>
+<li>La majorité des contrats sont accessibles directement en ligne. Ca prends quelques instants!</li>
+<li>Si ça n’est pas le cas, n’hésitez pas à téléphoner. Il faudra s’armer de patience…</li>
+<li>Vous avez le droit de prendre des contrats différents pour le gaz et l’élec. D’ailleurs, vous devriez ;-)</li>
+<li>Vous pouvez techniquement changer de contrat/fournisseur chaque mois. N’hésitez donc pas à faire fonctionner la concurrence…</li>
+<li>… mais attention aux frais fixes …</li>
+<li>Certains fournisseurs facturent les frais fixes en entier lors de la création du contrat, d’autre facturent au pro-rata du nombre de jour passé dans le contrat, avec un minimum de 6 mois. N’oubliez pas de prendre ça en compte dans votre calcul.</li>
+<li>Les indices des nouveaux contrats changent tout les mois. Trouver le contrat parfait nécessite de regarder chaque mois ce qu’il se passe…</li>
+<li>Un changement de fournisseur est un bon moyen de forcer le décompte.</li>
+<li>N’hésitez pas à envoyer un mail tout les 3 mois à votre fournisseur avec votre dernier index de compteur, pour qu’il puisse calculer si votre acompte est toujours correct.</li>
+</ul>
+</section>
+<section id="questions-ouvertes" class="level2">
+<h2 class="anchored" data-anchor-id="questions-ouvertes">Questions ouvertes</h2>
+<ul>
+<li>Que se passe t’il si on casse un contrat <code>belpex_q</code> en milieu de trimestre? Comment est déterminé le prix du dernier trimestre?</li>
+</ul>
+</section>
+<section id="todo" class="level2">
+<h2 class="anchored" data-anchor-id="todo">TODO</h2>
+<ul>
+<li>Discussions sur les acomptes.</li>
+<li>Mettre en ligne les outils interactifs</li>
+<li>Et si j’étais ministre?</li>
+<li>Lien sociaux (twitter/mail)</li>
+</ul>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
